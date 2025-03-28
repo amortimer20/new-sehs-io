@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import compOrgLogo from "../../assets/courses/computer-organization/img/computer-organization-logo.png";
+---
+
+<Layout>
+  <div class="p-5 mb-3 bg-black">
+    <a
+      href="/"
+      class="btn btn-sm cyber-btn cyber-btn-primary-6 btn-shadow-primary"
+      >← Back</a
+    >
+    <div class="container">
+      <div class="text-center">
+        <h1 class="text-eds-green">Computer Organization</h1>
+        <Image src={compOrgLogo} width="128" alt="Computer Organization Logo" />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h3>Number Systems</h3>
+    <p>
+      <a href="1-4-dec-bin-practice-1" class="text-decoration-none"
+        >1.4 Decimal to Binary Practice 1</a>
+    </p>
+    <p>
+      <a href="1-5-dec-bin-practice-2" class="text-decoration-none"
+        >1.5 Decimal to Binary Practice 2</a>
+    </p>
+    <p>
+      <a href="1-6-dec-bin-practice-3" class="text-decoration-none"
+        >1.6 Decimal to Binary Practice 3</a>
+    </p>
+  </div>
+</Layout>

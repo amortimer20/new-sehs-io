@@ -1,0 +1,82 @@
+[
+  {
+    "text": "0<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["0000", "0"],
+    "answerDetail": "0<sub>DEC</sub> = 0<sub>BIN</sub>"
+  },
+  {
+    "text": "1<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["0001", "1"],
+    "answerDetail": "1<sub>DEC</sub> = 1<sub>BIN</sub>"
+  },
+  {
+    "text": "2<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["0010", "10"],
+    "answerDetail": "2<sub>DEC</sub> = 10<sub>BIN</sub>"
+  },
+  {
+    "text": "3<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["0011", "11"],
+    "answerDetail": "3<sub>DEC</sub> = 11<sub>BIN</sub>"
+  },
+  {
+    "text": "4<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["0100", "100"],
+    "answerDetail": "4<sub>DEC</sub> = 100<sub>BIN</sub>"
+  },
+  {
+    "text": "5<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["0101", "101"],
+    "answerDetail": "5<sub>DEC</sub> = 101<sub>BIN</sub>"
+  },
+  {
+    "text": "6<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["0110", "110"],
+    "answerDetail": "6<sub>DEC</sub> = 110<sub>BIN</sub>"
+  },
+  {
+    "text": "7<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["0111", "111"],
+    "answerDetail": "7<sub>DEC</sub> = 111<sub>BIN</sub>"
+  },
+  {
+    "text": "8<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["1000"],
+    "answerDetail": "8<sub>DEC</sub> = 1000<sub>BIN</sub>"
+  },
+  {
+    "text": "9<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["1001"],
+    "answerDetail": "9<sub>DEC</sub> = 1001<sub>BIN</sub>"
+  },
+  {
+    "text": "10<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["1010"],
+    "answerDetail": "10<sub>DEC</sub> = 1010<sub>BIN</sub>"
+  },
+  {
+    "text": "11<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["1011"],
+    "answerDetail": "11<sub>DEC</sub> = 1011<sub>BIN</sub>"
+  },
+  {
+    "text": "12<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["1100"],
+    "answerDetail": "12<sub>DEC</sub> = 1100<sub>BIN</sub>"
+  },
+  {
+    "text": "13<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["1101"],
+    "answerDetail": "13<sub>DEC</sub> = 1101<sub>BIN</sub>"
+  },
+  {
+    "text": "14<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["1110"],
+    "answerDetail": "14<sub>DEC</sub> = 1110<sub>BIN</sub>"
+  },
+  {
+    "text": "15<sub>DEC</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": ["1111"],
+    "answerDetail": "15<sub>DEC</sub> = 1111<sub>BIN</sub>"
+  }
+]

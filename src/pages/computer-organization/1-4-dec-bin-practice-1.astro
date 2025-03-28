@@ -1,0 +1,44 @@
+---
+import Divider from "../../components/Divider.astro";
+import PracticeSet from "../../components/PracticeSet.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="container mt-4">
+    <a
+      href="/computer-organization/"
+      class="btn btn-sm cyber-btn cyber-btn-secondary-6 btn-shadow-secondary"
+    >
+      ← Back
+    </a>
+    <h2 class="text-center mt-5 text-eds-gold">
+      Activity 1.4 Decimal to Binary Practice 1
+    </h2>
+    <Divider variant="3" classes="my-4" />
+    <div class="row">
+      <div class="col">
+        <h3>Introduction</h3>
+        <p>
+          For each decimal number, write the corresponding binary number. The
+          values in this practice set range from 1 to 4 bits in length. You can
+          answer each question with either:
+        </p>
+        <ul>
+          <li>The precise binary value, or</li>
+          <li>A 4-bit binary number with leading zeroes.</li>
+        </ul>
+        <p>
+          Ex. <strong>1<sub>DEC</sub></strong> can be written as <strong
+            >1<sub>BIN</sub></strong
+          > or <strong>0001<sub>BIN</sub></strong>.
+        </p>
+      </div>
+    </div>
+    <div class="row my-5">
+      <div class="col-sm-12 col-md-6 offset-md-3">
+        <PracticeSet dataUrl="/json/dec-bin-1.json" />
+      </div>
+    </div>
+  </div>
+</Layout>

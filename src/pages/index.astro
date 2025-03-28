@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CourseCard from '../components/CourseCard.astro';
+import Divider from '../components/Divider.astro';
+
+import codeChallImg from '../assets/courses/code-challenges/img/code-challenges-thumbnail.png';
+import compOrgImg from '../assets/courses/computer-organization/img/computer-organization-thumbnail.png';
+import javaImg from '../assets/courses/java-programming/img/java-thumbnail.png';
+import pythonImg from '../assets/courses/python-programming/img/python-thumbnail.png';
+---
+
+<Layout>
+  <!-- Hero Unit -->
+  <div class="py-3 bg-black fuzzy mb-3">
+    <h1 class="text-center text-eds-green">St. Edward High School</h1>
+    <h4 class="text-center text-eds-gold">Computer science and Other Stuff</h3>
+    <img id="logo" src="/img/skynest-emblem-green.png" class="d-block mx-auto rotate-y img fluid" width="256" alt="SkyNest Logo">
+  </div>
+  <section class="container mb-3 p-1">
+    <!-- Course Content -->
+    <h3 class="text-center py-3">Course Content</h3>
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-4 col-lg-3 my-3">
+        <CourseCard link="#" img={pythonImg}, title="Python Programming" />
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-3 my-3">
+        <CourseCard link="/computer-organization/" img={compOrgImg}, title="Computer Organization" />
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-3 my-3">
+        <CourseCard link="#" img={javaImg}, title="Computer Organization" />
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-3 my-3">
+        <CourseCard link="#" img={codeChallImg}, title="Computer Organization" />
+      </div>
+    </div>
+    <Divider variant="9" />
+    <!-- Guides/Utilities -->
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-6">
+        <h4 class="text-center py-3">Guides</h4>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <h4 class="text-center py-3">Utilities</h4>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes shift {
+    0% {
+      background-position: -5% -5%;
+    }
+
+    100% {
+      background-position: 5%  5%;
+    }
+  }
+
+  @keyframes rotate-img {
+    25% {
+      transform: rotateY(90deg);
+    }
+
+    50% {
+      transform: rotateY(180deg);
+    }
+
+    75% {
+      transform: rotateY(270deg);
+    }
+
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .fuzzy {
+    background-image: url("/img/misc/noise-17.png");
+    animation: shift 0.2s linear infinite;
+    opacity: 100%;
+  }
+
+  .rotate-y {
+    animation: rotate-img 5s linear infinite;
+  }
+</style>
+
+<script>
+  let logo = document.querySelector<HTMLImageElement>("#logo")
+
+  if (logo) {
+    logo.addEventListener('mouseover', () => {
+      logo.src = "/img/skynest-emblem-white.png"
+    })
+
+    logo.addEventListener('mouseout', () => {
+      logo.src = "/img/skynest-emblem-green.png"
+    })
+  }
+</script>

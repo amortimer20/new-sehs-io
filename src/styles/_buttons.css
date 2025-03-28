@@ -1,0 +1,135 @@
+.cyber-btn {
+  --bs-text-opacity: 1;
+
+  font-family: "terminator";
+  text-transform: uppercase;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+  &:active {
+    transform: translateX(2px) translateY(2px);
+  }
+
+  &.cyber-btn-primary-1 {
+    background-image: url("/img/buttons/button-primary-1.png");
+  }
+
+  &.cyber-btn-primary-2 {
+    background-image: url("/img/buttons/button-primary-2.png");
+  }
+
+  &.cyber-btn-primary-3 {
+    background-image: url("/img/buttons/button-primary-3.png");
+  }
+
+  &.cyber-btn-primary-4 {
+    background-image: url("/img/buttons/button-primary-4.png");
+  }
+
+  &.cyber-btn-primary-5 {
+    background-image: url("/img/buttons/button-primary-5.png");
+  }
+
+  &.cyber-btn-primary-6 {
+    background-image: url("/img/buttons/button-primary-6.png");
+  }
+
+  &.cyber-btn-secondary-1 {
+    color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+    background-image: url("/img/buttons/button-secondary-1.png");
+  }
+
+  &.cyber-btn-secondary-2 {
+    color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+    background-image: url("/img/buttons/button-secondary-2.png");
+  }
+
+  &.cyber-btn-secondary-3 {
+    color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+    background-image: url("/img/buttons/button-secondary-3.png");
+  }
+
+  &.cyber-btn-secondary-4 {
+    color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+    background-image: url("/img/buttons/button-secondary-4.png");
+  }
+
+  &.cyber-btn-secondary-5 {
+    color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+    background-image: url("/img/buttons/button-secondary-5.png");
+  }
+
+  &.cyber-btn-secondary-6 {
+    background-image: url("/img/buttons/button-secondary-6.png");
+  }
+
+  &.cyber-btn-light-1 {
+    color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+    background-image: url("/img/buttons/button-light-1.png");
+  }
+
+  &.cyber-btn-light-2 {
+    color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+    background-image: url("/img/buttons/button-light-2.png");
+  }
+
+  &.cyber-btn-light-3 {
+    color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+    background-image: url("/img/buttons/button-light-3.png");
+  }
+
+  &.cyber-btn-light-4 {
+    color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+    background-image: url("/img/buttons/button-light-4.png");
+  }
+
+  &.cyber-btn-light-5 {
+    color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+    background-image: url("/img/buttons/button-light-5.png");
+  }
+
+  &.cyber-btn-light-6 {
+    background-image: url("/img/buttons/button-light-6.png");
+  }
+}
+
+.btn-shadow-primary {
+  box-shadow: 3px 3px 10px rgba(40, 160, 135, 0.5);
+
+  &:hover {
+    box-shadow: 3px 3px 10px rgb(40, 160, 135);
+  }
+
+  &:active {
+    transform: translateX(2px) translateY(2px);
+    box-shadow: 3px 3px 10px rgba(40, 160, 135, 0.5);
+  }
+}
+
+.btn-shadow-secondary {
+  box-shadow: 3px 3px 10px rgba(255, 255, 65, 0.25);
+
+  &:hover {
+    box-shadow: 3px 3px 10px rgba(255, 255, 65, 0.5);
+  }
+
+  &:active {
+    transform: translateX(2px) translateY(2px);
+    box-shadow: 3px 3px 10px rgba(255, 255, 65, 0.25);
+  }
+}
+
+.btn-shadow-light {
+  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.25);
+
+  &:hover {
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
+  }
+
+  &:active {
+    transform: translateX(2px) translateY(2px);
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.25);
+  }
+}
