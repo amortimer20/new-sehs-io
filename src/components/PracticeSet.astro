@@ -10,12 +10,14 @@ let { dataUrl: dataUrl } = Astro.props;
 <section x-data="practice">
   <div id="dataUrl" data-dataUrl={dataUrl}></div>
   <template x-if="!questions">
-    <button
-      class="btn cyber-btn cyber-btn-primary-1 btn-shadow-primary d-block mx-auto my-5"
-      @click="beginPractice()"
-    >
-      Begin Practice
-    </button>
+    <div class="card">
+      <button
+        class="btn cyber-btn cyber-btn-primary-1 btn-shadow-primary d-block mx-auto my-5"
+        @click="beginPractice()"
+      >
+        Begin Practice
+      </button>
+    </div>
   </template>
   <template x-if="questions">
     <div class="card" x-show="questions">
@@ -67,7 +69,7 @@ let { dataUrl: dataUrl } = Astro.props;
 
 <script>
   import Alpine from "alpinejs";
-import { shuffle } from "../scripts/utilities";
+  import { shuffle } from "../scripts/utilities";
 
   type Question = {
     text: string;
