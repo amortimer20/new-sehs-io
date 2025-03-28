@@ -1,0 +1,52 @@
+[
+  {
+    "text": "10001<sub>BIN</sub> = _____<sub>DEC</sub>",
+    "correctAnswers": ["17"],
+    "answerDetail": "10001<sub>BIN</sub> = 17<sub>DEC</sub>"
+  },
+  {
+    "text": "10110<sub>BIN</sub> = _____<sub>DEC</sub>",
+    "correctAnswers": ["22"],
+    "answerDetail": "10110<sub>BIN</sub> = 22<sub>DEC</sub>"
+  },
+  {
+    "text": "11000<sub>BIN</sub> = _____<sub>DEC</sub>",
+    "correctAnswers": ["24"],
+    "answerDetail": "11000<sub>BIN</sub> = 24<sub>DEC</sub>"
+  },
+  {
+    "text": "11111<sub>BIN</sub> = _____<sub>DEC</sub>",
+    "correctAnswers": ["31"],
+    "answerDetail": "11111<sub>BIN</sub> = 31<sub>DEC</sub>"
+  },
+  {
+    "text": "100000<sub>BIN</sub> = _____<sub>DEC</sub>",
+    "correctAnswers": ["32"],
+    "answerDetail": "100000<sub>BIN</sub> = 32<sub>DEC</sub>"
+  },
+  {
+    "text": "100101<sub>BIN</sub> = _____<sub>DEC</sub>",
+    "correctAnswers": ["37"],
+    "answerDetail": "100101<sub>BIN</sub> = 37<sub>DEC</sub>"
+  },
+  {
+    "text": "101001<sub>BIN</sub> = _____<sub>DEC</sub>",
+    "correctAnswers": ["41"],
+    "answerDetail": "101001<sub>BIN</sub> = 41<sub>DEC</sub>"
+  },
+  {
+    "text": "110101<sub>BIN</sub> = _____<sub>DEC</sub>",
+    "correctAnswers": ["53"],
+    "answerDetail": "110101<sub>BIN</sub> = 53<sub>DEC</sub>"
+  },
+  {
+    "text": "111000<sub>BIN</sub> = _____<sub>DEC</sub>",
+    "correctAnswers": ["56"],
+    "answerDetail": "111000<sub>BIN</sub> = 56<sub>DEC</sub>"
+  },
+  {
+    "text": "111100<sub>BIN</sub> = _____<sub>DEC</sub>",
+    "correctAnswers": ["60"],
+    "answerDetail": "111100<sub>BIN</sub> = 60<sub>DEC</sub>"
+  }
+]
