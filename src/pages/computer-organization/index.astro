@@ -2,15 +2,18 @@
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import compOrgLogo from "../../assets/courses/computer-organization/img/computer-organization-logo.png";
+import CyberListItem from "../../components/CyberListItem.astro";
 ---
 
 <Layout>
   <div class="p-5 mb-3 bg-black">
-    <a
-      href="/"
-      class="btn btn-sm cyber-btn cyber-btn-primary-6 btn-shadow-primary"
-      >← Back</a
-    >
+    <div class="my-3">
+      <a
+        href="/"
+        class="btn btn-sm cyber-btn cyber-btn-primary-6 btn-shadow-primary"
+        >← Back</a
+      >
+    </div>
     <div class="container">
       <div class="text-center">
         <h1 class="text-eds-green">Computer Organization</h1>
@@ -20,15 +23,34 @@ import compOrgLogo from "../../assets/courses/computer-organization/img/computer
   </div>
   <div class="container">
     <h3>Number Systems</h3>
-    <p><a href="1-1-bin-dec-practice-1">1.1 Binary to Decimal Practice 1</a></p>
-    <p><a href="1-2-bin-dec-practice-2">1.2 Binary to Decimal Practice 2</a></p>
-    <p><a href="1-3-bin-dec-practice-3">1.3 Binary to Decimal Practice 3</a></p>
-    <p><a href="1-4-dec-bin-practice-1">1.4 Decimal to Binary Practice 1</a></p>
-    <p><a href="1-5-dec-bin-practice-2">1.5 Decimal to Binary Practice 2</a></p>
-    <p><a href="1-6-dec-bin-practice-3">1.6 Decimal to Binary Practice 3</a></p>
-    <p><a href="1-7-hex-bin-practice-1">1.7 Hexadecimal to Binary Practice 1</a></p>
-    <p><a href="1-8-hex-bin-practice-2">1.8 Hexadecimal to Binary Practice 2</a></p>
-    <p><a href="1-9-bin-hex-practice">1.9 Binary to Hexadecimal Practice</a></p>
-
+    <ul>
+      <CyberListItem>
+        <a href="1-1-bin-dec-practice-1">1.1 Binary to Decimal Practice 1</a>
+      </CyberListItem>
+      <CyberListItem>
+        <a href="1-2-bin-dec-practice-2">1.2 Binary to Decimal Practice 2</a>
+      </CyberListItem>
+      <CyberListItem>
+        <a href="1-3-bin-dec-practice-3">1.3 Binary to Decimal Practice 3</a>
+      </CyberListItem>
+      <CyberListItem>
+        <a href="1-4-dec-bin-practice-1">1.4 Decimal to Binary Practice 1</a>
+      </CyberListItem>
+      <CyberListItem>
+        <a href="1-5-dec-bin-practice-2">1.5 Decimal to Binary Practice 2</a>
+      </CyberListItem>
+      <CyberListItem>
+        <a href="1-6-dec-bin-practice-3">1.6 Decimal to Binary Practice 3</a>
+      </CyberListItem>
+      <CyberListItem>
+        <a href="1-7-hex-bin-practice-1">1.7 Hex to Binary Practice 1</a>
+      </CyberListItem>
+      <CyberListItem>
+        <a href="1-8-hex-bin-practice-2">1.8 Hex to Binary Practice 2</a>
+      </CyberListItem>
+      <CyberListItem>
+        <a href="1-9-bin-hex-practice">1.9 Binary to Hex Practice</a>
+      </CyberListItem>
+    </ul>
   </div>
 </Layout>
