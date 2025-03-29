@@ -1,0 +1,52 @@
+[
+  {
+    "text": "10000001<sub>BIN</sub> = _____<sub>HEX</sub>",
+    "correctAnswers": ["81"],
+    "answerDetail": "10000001<sub>BIN</sub> = 81<sub>HEX</sub>"
+  },
+  {
+    "text": "11101100<sub>BIN</sub> = _____<sub>HEX</sub>",
+    "correctAnswers": ["EC"],
+    "answerDetail": "11101100<sub>BIN</sub> = EC<sub>HEX</sub>"
+  },
+  {
+    "text": "10101110011<sub>BIN</sub> = _____<sub>HEX</sub>",
+    "correctAnswers": ["573"],
+    "answerDetail": "10101110011<sub>BIN</sub> = 573<sub>HEX</sub>"
+  },
+  {
+    "text": "101010101111<sub>BIN</sub> = _____<sub>HEX</sub>",
+    "correctAnswers": ["AAF"],
+    "answerDetail": "101010101111<sub>BIN</sub> = AAF<sub>HEX</sub>"
+  },
+  {
+    "text": "11010101101<sub>BIN</sub> = _____<sub>HEX</sub>",
+    "correctAnswers": ["6AD"],
+    "answerDetail": "11010101101<sub>BIN</sub> = 6AD<sub>HEX</sub>"
+  },
+  {
+    "text": "1001111101111<sub>BIN</sub> = _____<sub>HEX</sub>",
+    "correctAnswers": ["13EF"],
+    "answerDetail": "1001111101111<sub>BIN</sub> = 13EF<sub>HEX</sub>"
+  },
+  {
+    "text": "1101111101011<sub>BIN</sub> = _____<sub>HEX</sub>",
+    "correctAnswers": ["1BEB"],
+    "answerDetail": "1101111101011<sub>BIN</sub> = 1BEB<sub>HEX</sub>"
+  },
+  {
+    "text": "10111011111110<sub>BIN</sub> = _____<sub>HEX</sub>",
+    "correctAnswers": ["2EFE"],
+    "answerDetail": "10111011111110<sub>BIN</sub> = 2EFE<sub>HEX</sub>"
+  },
+  {
+    "text": "1001010111110110<sub>BIN</sub> = _____<sub>HEX</sub>",
+    "correctAnswers": ["95F6"],
+    "answerDetail": "1001010111110110<sub>BIN</sub> = 95F6<sub>HEX</sub>"
+  },
+  {
+    "text": "1101111011111111<sub>BIN</sub> = _____<sub>HEX</sub>",
+    "correctAnswers": ["DEFF"],
+    "answerDetail": "1101111011111111<sub>BIN</sub> = DEFF<sub>HEX</sub>"
+  }
+]

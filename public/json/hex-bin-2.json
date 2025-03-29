@@ -1,0 +1,94 @@
+[
+  {
+    "text": "12345<sub>HEX</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": [
+      "10010001101000101",
+      "00010010001101000101",
+      "1 0010 0011 0100 0101",
+      "0001 0010 0011 0100 0101"
+    ],
+    "answerDetail": "12345<sub>HEX</sub> = 10010001101000101<sub>BIN</sub>"
+  },
+  {
+    "text": "ABCDE<sub>HEX</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": [
+      "10101011110011011110",
+      "1010 1011 1100 1101 1110"
+    ],
+    "answerDetail": "ABCDE<sub>HEX</sub> = 10101011110011011110<sub>BIN</sub>"
+  },
+  {
+    "text": "54321<sub>HEX</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": [
+      "01010100001100100001",
+      "1010100001100100001",
+      "101 0100 0011 0010 0001",
+      "0101 0100 0011 0010 0001"
+    ],
+    "answerDetail": "54321<sub>HEX</sub> = 1010100001100100001<sub>BIN</sub>"
+  },
+  {
+    "text": "A1B2C<sub>HEX</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": [
+      "10100001101100101100",
+      "1010 0001 1011 0010 1100"
+    ],
+    "answerDetail": "A1B2C<sub>HEX</sub> = 10100001101100101100<sub>BIN</sub>"
+  },
+  {
+    "text": "CDEF0<sub>HEX</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": [
+      "11001101111011110000",
+      "1100 1101 1110 1111 0000"
+    ],
+    "answerDetail": "CDEF0<sub>HEX</sub> = 11001101111011110000<sub>BIN</sub>"
+  },
+  {
+    "text": "123ABC<sub>HEX</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": [
+      "100100011101010111100",
+      "000100100011101010111100",
+      "1 0010 0011 1010 1011 1100",
+      "0001 0010 0011 1010 1011 1100"
+    ],
+    "answerDetail": "123ABC<sub>HEX</sub> = 100100011101010111100<sub>BIN</sub>"
+  },
+  {
+    "text": "FFFFF<sub>HEX</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": [
+      "11111111111111111111",
+      "1111 1111 1111 1111 1111"
+    ],
+    "answerDetail": "FFFFF<sub>HEX</sub> = 11111111111111111111<sub>BIN</sub>"
+  },
+  {
+    "text": "30AF19<sub>HEX</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": [
+      "001100001010111100011001",
+      "001100001010111100011001",
+      "11 0000 1010 1111 0001 1001",
+      "0011 0000 1010 1111 0001 1001"
+    ],
+    "answerDetail": "30AF19<sub>HEX</sub> = 001100001010111100011001<sub>BIN</sub>"
+  },
+  {
+    "text": "1F2A3<sub>HEX</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": [
+      "11111001010100011",
+      "00011111001010100011",
+      "1 1111 0010 1010 0011",
+      "0001 1111 0010 1010 0011"
+    ],
+    "answerDetail": "1F2A3<sub>HEX</sub> = 11111001010100011<sub>BIN</sub>"
+  },
+  {
+    "text": "2B3C4<sub>HEX</sub> = _____<sub>BIN</sub>",
+    "correctAnswers": [
+      "101011001111000100",
+      "00101011001111000100",
+      "10 1011 0011 1100 0100",
+      "0010 1011 0011 1100 0100"
+    ],
+    "answerDetail": "2B3C4<sub>HEX</sub> = 101011001111000100<sub>BIN</sub>"
+  }
+]
