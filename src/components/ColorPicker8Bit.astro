@@ -2,7 +2,7 @@
 
 ---
 
-<section x-data="colorPicker24bit">
+<section x-data="colorPicker8bit">
   <div class="row">
     <div class="col-sm-12 col-md-6 my-auto">
       <label class="form-label">Red: <span x-text="rBin"></span></label>
@@ -10,7 +10,7 @@
         type="range"
         class="form-range"
         min="0"
-        max="255"
+        max="7"
         step="1"
         x-model="r"
       />
@@ -19,7 +19,7 @@
         type="range"
         class="form-range"
         min="0"
-        max="255"
+        max="7"
         step="1"
         x-model="g"
       />
@@ -30,14 +30,17 @@
         type="range"
         class="form-range"
         min="0"
-        max="255"
+        max="3"
         step="1"
         x-model="b"
       />
-      <p>Hex: #<span x-text="hex"></span></p>
     </div>
     <div class="col-sm-12 col-md-6">
-      <div class="color-square mt-3" :style="`background-color: #${hex}`"></div>
+      <div
+        class="color-square mt-3"
+        :style="`background-color: rgb(${rMappedVal}, ${gMappedVal}, ${bMappedVal})`"
+      >
+      </div>
       <p>
         <span class="text-red" x-text="rBin"></span><span
           class="text-green"
@@ -49,6 +52,7 @@
 
 <script>
   import Alpine from "alpinejs";
+  import { mapRange } from "../scripts/utilities";
 
   interface ColorPicker {
     r: string;
@@ -57,7 +61,9 @@
     get rBin(): string;
     get gBin(): string;
     get bBin(): string;
-    get hex(): string;
+    get rMappedVal(): number;
+    get gMappedVal(): number;
+    get bMappedVal(): number;
   }
 
   let colorPicker: ColorPicker = {
@@ -65,23 +71,27 @@
     g: "0",
     b: "0",
     get rBin() {
-      return parseInt(this.r).toString(2).padStart(8, "0");
+      return parseInt(this.r).toString(2).padStart(3, "0");
     },
     get gBin() {
-      return parseInt(this.g).toString(2).padStart(8, "0");
+      return parseInt(this.g).toString(2).padStart(3, "0");
     },
     get bBin() {
-      return parseInt(this.b).toString(2).padStart(8, "0");
+      return parseInt(this.b).toString(2).padStart(2, "0");
     },
-    get hex() {
-      const toHex = (val: string): string =>
-        parseInt(val).toString(16).toUpperCase().padStart(2, "0");
-      return toHex(this.r) + toHex(this.g) + toHex(this.b);
+    get rMappedVal() {
+      return Math.trunc(mapRange(parseInt(this.r), 0, 7, 0, 255));
+    },
+    get gMappedVal() {
+      return Math.trunc(mapRange(parseInt(this.g), 0, 7, 0, 255));
+    },
+    get bMappedVal() {
+      return Math.trunc(mapRange(parseInt(this.b), 0, 3, 0, 255));
     },
   };
 
   document.addEventListener("alpine:init", () => {
-    Alpine.data("colorPicker24bit", () => colorPicker);
+    Alpine.data("colorPicker8bit", () => colorPicker);
   });
 </script>
 
@@ -93,14 +103,14 @@
   }
 
   .text-red {
-    color: #f00;
+    color: #F00;
   }
 
   .text-green {
-    color: #0f0;
+    color: #0F0;
   }
 
   .text-blue {
-    color: #00f;
+    color: #00F;
   }
 </style>

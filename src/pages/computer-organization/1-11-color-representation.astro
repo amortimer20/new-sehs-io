@@ -1,0 +1,54 @@
+---
+import ColorPicker1Bit from "../../components/ColorPicker1Bit.astro";
+import ColorPicker24Bit from "../../components/ColorPicker24Bit.astro";
+import ColorPicker8Bit from "../../components/ColorPicker8Bit.astro";
+import Divider from "../../components/Divider.astro";
+import RGBColorPicker from "../../components/RGBColorPicker.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="container mt-4">
+    <a
+      href="/computer-organization/"
+      class="btn btn-sm cyber-btn cyber-btn-secondary-6 btn-shadow-secondary"
+    >
+      ← Back
+    </a>
+    <h2 class="text-center mt-5 text-eds-gold">
+      Activity 1.11 Color Representation
+    </h2>
+    <Divider variant="3" classes="my-4" />
+    <div class="row">
+      <div class="col">
+        <h3>RGB Color Picker</h3>
+        <RGBColorPicker />
+      </div>
+    </div>
+    <Divider variant="8" classes="my-5" />
+    <div class="row mb-5">
+      <div class="col">
+        <h3>24-bit Color Picker</h3>
+        <p><i>2<sup>24</sup> = 16,777,216</i> possible combinations</p>
+        <ColorPicker24Bit />
+      </div>
+    </div>
+    <Divider variant="8" classes="my-5" />
+    <div class="row mb-5">
+      <div class="col">
+        <h3>8-bit Color Picker</h3>
+        <p><i>2<sup>8</sup> = 256</i> possible combinations</p>
+
+        <ColorPicker8Bit />
+      </div>
+    </div>
+    <Divider variant="8" classes="my-5" />
+    <div class="row mb-5">
+      <div class="col">
+        <h3>1-bit Color Picker</h3>
+        <p><i>2<sup>1</sup> = 2</i> possible combinations</p>
+        <ColorPicker1Bit />
+      </div>
+    </div>
+  </div>
+</Layout>

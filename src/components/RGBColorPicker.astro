@@ -1,36 +1,44 @@
 ---
+
 ---
 
 <section x-data="colorPicker">
-  <label class="form-label">Red: <span x-text="r"></span></label>
-  <input
-    type="range"
-    class="form-range"
-    min="0"
-    max="255"
-    step="1"
-    x-model="r"
-  />
-  <label class="form-label">Green: <span x-text="g"></span></label>
-  <input
-    type="range"
-    class="form-range"
-    min="0"
-    max="255"
-    step="1"
-    x-model="g"
-  />
-  <label class="form-label" for="blue">Blue: <span x-text="b"></span></label>
-  <input
-    type="range"
-    class="form-range"
-    min="0"
-    max="255"
-    step="1"
-    x-model="b"
-  />
-  <div class="color-square mt-3" :style="`background-color: #${hex}`"></div>
-  <p>Hex: #<span x-text="hex"></span></p>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 my-auto">
+      <label class="form-label">Red: <span x-text="r"></span></label>
+      <input
+        type="range"
+        class="form-range"
+        min="0"
+        max="255"
+        step="1"
+        x-model="r"
+      />
+      <label class="form-label">Green: <span x-text="g"></span></label>
+      <input
+        type="range"
+        class="form-range"
+        min="0"
+        max="255"
+        step="1"
+        x-model="g"
+      />
+      <label class="form-label" for="blue">Blue: <span x-text="b"></span></label
+      >
+      <input
+        type="range"
+        class="form-range"
+        min="0"
+        max="255"
+        step="1"
+        x-model="b"
+      />
+      <p>Hex: #<span x-text="hex"></span></p>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="color-square" :style="`background-color: #${hex}`"></div>
+    </div>
+  </div>
 </section>
 
 <script>
@@ -61,7 +69,8 @@
 
 <style>
   .color-square {
-    height: 15.625rem;
+    width: auto;
+    height: 14rem;
     border: 3px solid black;
     border-radius: 5px;
   }
