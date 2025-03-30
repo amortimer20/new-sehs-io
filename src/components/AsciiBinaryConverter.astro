@@ -1,0 +1,53 @@
+---
+
+---
+
+<section x-data="asciiBinaryConverter">
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <label for="ascii">ASCII:</label>
+      <textarea
+        id="ascii"
+        class="form-control"
+        placeholder="Type your message here"
+        x-model="asciiText"
+        rows="5"></textarea>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <label for="binary">Binary:</label>
+      <textarea id="binary" class="form-control" readonly x-text="binaryText" rows="5"></textarea>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Alpine from "alpinejs";
+
+  interface AsciiBinaryConverter {
+    asciiText: string;
+    get binaryText(): string
+  }
+
+  let asciiBinConverter: AsciiBinaryConverter = {
+    asciiText: "",
+    get binaryText() {
+      let output: string = "";
+
+      for (const character of this.asciiText) {
+        output += character.charCodeAt(0).toString(2).padStart(8, "0") + " ";
+      }
+
+      return output
+    }
+  };
+
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("asciiBinaryConverter", () => asciiBinConverter);
+  });
+</script>
+
+<style>
+  textarea {
+    resize: none;
+  }
+</style>
