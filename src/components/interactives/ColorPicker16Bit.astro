@@ -1,0 +1,116 @@
+---
+
+---
+
+<section x-data="colorPicker16bit">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 my-auto">
+      <label class="form-label">Red: <span x-text="rBin"></span></label>
+      <input
+        type="range"
+        class="form-range"
+        min="0"
+        max="31"
+        step="1"
+        x-model="r"
+      />
+      <label class="form-label">Green: <span x-text="gBin"></span></label>
+      <input
+        type="range"
+        class="form-range"
+        min="0"
+        max="63"
+        step="1"
+        x-model="g"
+      />
+      <label class="form-label" for="blue"
+        >Blue: <span x-text="bBin"></span></label
+      >
+      <input
+        type="range"
+        class="form-range"
+        min="0"
+        max="31"
+        step="1"
+        x-model="b"
+      />
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div
+        class="color-square mt-3"
+        :style="`background-color: rgb(${rMappedVal}, ${gMappedVal}, ${bMappedVal})`"
+      >
+      </div>
+      <p>
+        <span class="text-red" x-text="rBin"></span><span
+          class="text-green"
+          x-text="gBin"></span><span class="text-blue" x-text="bBin"></span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Alpine from "alpinejs";
+  import { mapRange } from "../../scripts/utilities";
+
+  interface ColorPicker {
+    r: string;
+    g: string;
+    b: string;
+    get rBin(): string;
+    get gBin(): string;
+    get bBin(): string;
+    get rMappedVal(): number;
+    get gMappedVal(): number;
+    get bMappedVal(): number;
+  }
+
+  let colorPicker: ColorPicker = {
+    r: "0",
+    g: "0",
+    b: "0",
+    get rBin() {
+      return parseInt(this.r).toString(2).padStart(5, "0");
+    },
+    get gBin() {
+      return parseInt(this.g).toString(2).padStart(6, "0");
+    },
+    get bBin() {
+      return parseInt(this.b).toString(2).padStart(5, "0");
+    },
+    get rMappedVal() {
+      return Math.trunc(mapRange(parseInt(this.r), 0, 32, 0, 255));
+    },
+    get gMappedVal() {
+      return Math.trunc(mapRange(parseInt(this.g), 0, 64, 0, 255));
+    },
+    get bMappedVal() {
+      return Math.trunc(mapRange(parseInt(this.b), 0, 32, 0, 255));
+    },
+  };
+
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("colorPicker16bit", () => colorPicker);
+  });
+</script>
+
+<style>
+  .color-square {
+    height: 14rem;
+    border: 3px solid black;
+    border-radius: 5px;
+  }
+
+  .text-red {
+    color: #F00;
+  }
+
+  .text-green {
+    color: #0F0;
+  }
+
+  .text-blue {
+    color: #00F;
+  }
+</style>

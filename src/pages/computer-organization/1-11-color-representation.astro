@@ -5,6 +5,7 @@ import ColorPicker8Bit from "../../components/interactives/ColorPicker8Bit.astro
 import Divider from "../../components/ui/Divider.astro";
 import RGBColorPicker from "../../components/interactives/RGBColorPicker.astro";
 import Layout from "../../layouts/Layout.astro";
+import ColorPicker16Bit from "../../components/interactives/ColorPicker16Bit.astro";
 ---
 
 <Layout>
@@ -21,34 +22,60 @@ import Layout from "../../layouts/Layout.astro";
     <Divider variant="3" classes="my-4" />
     <div class="row">
       <div class="col">
-        <h3>RGB Color Picker</h3>
+        <h3>
+          <span class="text-red">R</span><span class="text-green">G</span><span
+            class="text-blue">B</span
+          > Color Picker
+        </h3>
         <RGBColorPicker />
       </div>
     </div>
     <Divider variant="8" classes="my-5" />
     <div class="row mb-5">
       <div class="col">
-        <h3>24-bit Color Picker</h3>
-        <p><i>2<sup>24</sup> = 16,777,216</i> possible combinations</p>
-        <ColorPicker24Bit />
+        <h3>1-bit (<span class="text-eds-gold">Monochrome</span>) Color Depth</h3>
+        <p><i>2<sup>1</sup> = 2</i> possible combinations</p>
+        <ColorPicker1Bit />
       </div>
     </div>
     <Divider variant="8" classes="my-5" />
     <div class="row mb-5">
       <div class="col">
-        <h3>8-bit Color Picker</h3>
+        <h3>8-bit (<span class="text-eds-gold">256-color mode</span>) Color Depth</h3>
         <p><i>2<sup>8</sup> = 256</i> possible combinations</p>
-
         <ColorPicker8Bit />
       </div>
     </div>
     <Divider variant="8" classes="my-5" />
     <div class="row mb-5">
       <div class="col">
-        <h3>1-bit Color Picker</h3>
-        <p><i>2<sup>1</sup> = 2</i> possible combinations</p>
-        <ColorPicker1Bit />
+        <h3>16-bit (<span class="text-eds-gold">High Color</span>) Color Depth</h3>
+        <p><i>2<sup>16</sup> = 65,536</i> possible combinations</p>
+        <ColorPicker16Bit />
+      </div>
+    </div>
+    <Divider variant="8" classes="my-5" />
+    <div class="row mb-5">
+      <div class="col">
+        <h3>24-bit (<span class="text-eds-gold">True Color</span>) Color Depth</h3>
+        <p><i>2<sup>24</sup> = 16,777,216</i> possible combinations</p>
+        <ColorPicker24Bit />
       </div>
     </div>
   </div>
 </Layout>
+
+
+<style>
+  .text-red {
+    color: #F00;
+  }
+
+  .text-green {
+    color: #0F0;
+  }
+
+  .text-blue {
+    color: #00F;
+  }
+</style>
