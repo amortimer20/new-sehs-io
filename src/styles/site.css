@@ -5,11 +5,11 @@
 @import "./_typography.css";
 
 .text-eds-green {
-  color: var(--eds-green);
+  color: var(--eds-green) !important;
 }
 
 .text-eds-gold {
-  color: var(--eds-gold);
+  color: var(--eds-gold) !important;
 }
 
 [x-cloak] { display: none !important; }
