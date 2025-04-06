@@ -8,11 +8,8 @@ let { dataUrl: dataUrl } = Astro.props;
 <section x-data="practice">
   <div id="dataUrl" data-dataUrl={dataUrl}></div>
   <template x-if="!questions">
-    <div class="card">
-      <button
-        class="btn cyber-btn cyber-btn-primary-1 btn-shadow-primary d-block mx-auto my-5"
-        @click="beginPractice()"
-      >
+    <div class="card p-5">
+      <button class="btn btn-outline-primary" @click="beginPractice()">
         Begin Practice
       </button>
     </div>
@@ -40,21 +37,21 @@ let { dataUrl: dataUrl } = Astro.props;
       </div>
       <div class="card-footer" x-show="!displayScore">
         <button
-          class="btn cyber-btn cyber-btn-primary-3 btn-shadow-primary"
+          class="btn btn-outline-primary"
           x-show="!isQuestionComplete"
           @click="submitAnswer()"
         >
           Submit
         </button>
         <button
-          class="btn cyber-btn cyber-btn-primary-3 btn-shadow-primary"
+          class="btn btn-outline-primary"
           x-show="isQuestionComplete && !isPracticeComplete"
           @click="beginNextQuestion()"
         >
           Next Question
         </button>
         <button
-          class="btn cyber-btn cyber-btn-primary-3 btn-shadow-primary"
+          class="btn btn-outline-primary"
           x-show="isPracticeComplete"
           @click="displayScore = true;"
         >
@@ -133,7 +130,7 @@ let { dataUrl: dataUrl } = Astro.props;
         this.currentQuestion.correctAnswers.includes(this.submittedAnswer)
       ) {
         this.responseHTML = this.currentQuestion.answerDetail;
-        this.responseStyle = "text-info";
+        this.responseStyle = "text-cyber-primary";
         this.isQuestionComplete = true;
         this.questionsAnswered++;
 
@@ -142,7 +139,7 @@ let { dataUrl: dataUrl } = Astro.props;
         }
       } else {
         this.responseHTML = "Try again!";
-        this.responseStyle = "text-danger";
+        this.responseStyle = "text-cyber-danger";
         this.isRightOnFirstTry = false;
       }
     },

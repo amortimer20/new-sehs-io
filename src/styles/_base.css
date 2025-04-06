@@ -1,0 +1,20 @@
+:root, [data-bs-theme=dark] {
+  /* Base */
+  --bs-body-bg: var(--cyber-dark);
+  --bs-body-font-family: "jetbrains";
+  --bs-heading-font-family: "terminator";
+
+  /* Cyber UI */
+  --cyber-primary: rgb(27, 212, 215);
+  --cyber-primary-rgb: 27, 212, 215;
+  --cyber-primary-lighten: rgb(70, 230, 230);
+  --cyber-primary-darken: rgb(15, 170, 175);
+  --cyber-danger: rgb(254, 1, 85);
+  --cyber-danger-rgb: 254, 1, 85;
+  --cyber-dark: rgb(27, 23, 40);
+  --cyber-darker: rgb(5, 0, 20);
+
+  /* Ed's */
+  --eds-green: rgb(10, 100, 80);
+  --eds-gold: rgb(255, 210, 40);
+}

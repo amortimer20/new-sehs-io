@@ -1,0 +1,23 @@
+.bg-cyber {
+  background-color: var(--cyber-dark);
+}
+
+.bg-cyber-dark {
+  background-color: var(--cyber-darker);
+}
+
+.text-cyber-primary {
+  color: var(--cyber-primary) !important;
+}
+
+.text-cyber-danger {
+  color: var(--cyber-danger) !important;
+}
+
+.text-eds-green {
+  color: var(--eds-green) !important;
+}
+
+.text-eds-gold {
+  color: var(--eds-gold) !important;
+}

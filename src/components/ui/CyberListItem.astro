@@ -1,10 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import bullet1 from "../../assets/img/ui/list-icons/li-bullet-1.png";
-import bullet2 from "../../assets/img/ui/list-icons/li-bullet-2.png";
-import bullet3 from "../../assets/img/ui/list-icons/li-bullet-3.png";
-import bullet4 from "../../assets/img/ui/list-icons/li-bullet-4.png";
-import bullet5 from "../../assets/img/ui/list-icons/li-bullet-5.png";
+import bullet1 from "../../assets/img/ui/list-icons/li-bullet-1.svg";
+import bullet2 from "../../assets/img/ui/list-icons/li-bullet-2.svg";
+import bullet3 from "../../assets/img/ui/list-icons/li-bullet-3.svg";
 
 export interface Props {
   variant?: string;
@@ -15,9 +13,7 @@ let { variant = "1" } = Astro.props;
 const bulletImages: Record<string, ImageMetadata> = {
   "1": bullet1,
   "2": bullet2,
-  "3": bullet3,
-  "4": bullet4,
-  "5": bullet5
+  "3": bullet3
 };
 ---
 
