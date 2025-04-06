@@ -1,37 +1,59 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import CourseCard from '../components/ui/CourseCard.astro';
-import Divider from '../components/ui/Divider.astro';
-import CyberListItem from '../components/ui/CyberListItem.astro';
+import Layout from "../layouts/Layout.astro";
+import CourseCard from "../components/ui/CourseCard.astro";
+import Divider from "../components/ui/Divider.astro";
+import CyberListItem from "../components/ui/CyberListItem.astro";
 
-import codeChallImg from '../assets/courses/code-challenges/img/code-challenges-thumbnail.png';
-import compOrgImg from '../assets/courses/computer-organization/img/computer-organization-thumbnail.png';
-import javaImg from '../assets/courses/java-programming/img/java-thumbnail.png';
-import pythonImg from '../assets/courses/python-programming/img/python-thumbnail.png';
+import codeChallImg from "../assets/courses/code-challenges/img/code-challenges-thumbnail.png";
+import compOrgImg from "../assets/courses/computer-organization/img/computer-organization-thumbnail.png";
+import javaImg from "../assets/courses/java-programming/img/java-thumbnail.png";
+import pythonImg from "../assets/courses/python-programming/img/python-thumbnail.png";
+import skynestLogo from "../assets/img/misc/skynest-emblem-green.svg";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
   <!-- Hero Unit -->
   <div class="py-3 bg-black fuzzy mb-3">
     <h1 class="text-center text-cyber-primary">St. Edward High School</h1>
-    <h4 class="text-center">Computer science and Other Stuff</h3>
-    <img id="logo" src="/img/skynest-emblem-green.png" class="d-block mx-auto rotate-y img fluid" width="256" alt="SkyNest Logo">
+    <h4 class="text-center">Computer science and Other Stuff</h4>
+    <span x-data="logo">
+      <Image
+        id="skynestLogo"
+        src={skynestLogo}
+        class="d-block mx-auto img-fluid w-25"
+        alt="SkyNest Logo"
+        title="Click Me"
+        @click="accelerate"
+        @mouseout="decelerate"
+      />
+    </span>
   </div>
   <section class="container mb-3 p-1">
     <!-- Course Content -->
     <h3 class="text-center py-3">Course Content</h3>
     <div class="row mb-3">
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
-        <CourseCard link="#" img={pythonImg}, title="Python Programming" />
+        <CourseCard link="#" img={pythonImg} , title="Python Programming" />
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
-        <CourseCard link="/computer-organization/" img={compOrgImg}, title="Computer Organization" />
+        <CourseCard
+          link="/computer-organization/"
+          img={compOrgImg}
+          ,
+          title="Computer Organization"
+        />
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
-        <CourseCard link="#" img={javaImg}, title="Computer Organization" />
+        <CourseCard link="#" img={javaImg} , title="Computer Organization" />
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
-        <CourseCard link="#" img={codeChallImg}, title="Computer Organization" />
+        <CourseCard
+          link="#"
+          img={codeChallImg}
+          ,
+          title="Computer Organization"
+        />
       </div>
     </div>
     <Divider variant="9" />
@@ -59,25 +81,7 @@ import pythonImg from '../assets/courses/python-programming/img/python-thumbnail
     }
 
     100% {
-      background-position: 5%  5%;
-    }
-  }
-
-  @keyframes rotate-img {
-    25% {
-      transform: rotateY(90deg);
-    }
-
-    50% {
-      transform: rotateY(180deg);
-    }
-
-    75% {
-      transform: rotateY(270deg);
-    }
-
-    100% {
-      transform: rotateY(360deg);
+      background-position: 5% 5%;
     }
   }
 
@@ -86,22 +90,23 @@ import pythonImg from '../assets/courses/python-programming/img/python-thumbnail
     animation: shift 0.2s linear infinite;
     opacity: 100%;
   }
-
-  .rotate-y {
-    animation: rotate-img 5s linear infinite;
-  }
 </style>
 
 <script>
-  let logo = document.querySelector<HTMLImageElement>("#logo")
+  import Alpine from "alpinejs";
+  import { animate } from "animejs";
 
-  if (logo) {
-    logo.addEventListener('mouseover', () => {
-      logo.src = "/img/skynest-emblem-white.png"
-    })
-
-    logo.addEventListener('mouseout', () => {
-      logo.src = "/img/skynest-emblem-green.png"
-    })
-  }
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("logo", () => ({
+      acceleration: 0,
+      accelerate() {
+        animate(this.$el, { rotate: `+=${this.acceleration}` });
+        this.acceleration += 10;
+      },
+      decelerate() {
+        animate(this.$el, { rotate: `0` });
+        this.acceleration = 0;
+      },
+    }));
+  });
 </script>
