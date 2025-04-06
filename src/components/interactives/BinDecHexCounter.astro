@@ -4,14 +4,14 @@
 
 <section x-data="decBinHexCounter">
   <label class="form-label">Decimal:</label>
-  <input class="form-control" type="text" x-model="decValue" readonly />
+  <input class="form-control form-control-lg text-cyber-primary" type="text" x-model="decValue" readonly />
   <label class="form-label">Binary:</label>
-  <input class="form-control" type="text" x-model="binValue" readonly />
+  <input class="form-control form-control-lg text-light" type="text" x-model="binValue" readonly />
   <label class="form-label">Hex:</label>
-  <input class="form-control" type="text" x-model="hexValue" readonly />
+  <input class="form-control form-control-lg text-danger" type="text" x-model="hexValue" readonly />
   <div class="my-3 text-center">
-    <button class="btn btn-outline-primary d-inline-block m-2" @click="decrement" :disabled="valueIsZero">Decrement</button>
-    <button class="btn btn-outline-primary d-inline-block m-2" @click="increment">Increment</button>
+    <button class="btn btn-outline-primary d-inline-block m-2" @click="decrement" :disabled="valueIsZero">Decrement -</button>
+    <button class="btn btn-outline-primary d-inline-block m-2" @click="increment">Increment +</button>
   </div>
 </section>
 
@@ -50,3 +50,10 @@
     Alpine.data("decBinHexCounter", () => decBinHexCounter);
   });
 </script>
+
+<style>
+  input {
+    border-radius: 0;
+    background-color: var(--cyber-darker);
+  }
+</style>
