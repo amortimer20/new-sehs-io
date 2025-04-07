@@ -4,5 +4,6 @@
 @import "./_buttons.css";
 @import "./_typography.css";
 @import "./_color.css";
+@import "./_forms.css";
 
 [x-cloak] { display: none !important; }

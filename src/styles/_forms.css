@@ -1,0 +1,4 @@
+/* Range */
+.form-range::-webkit-slider-thumb {
+  background-color: var(--cyber-primary);
+}
