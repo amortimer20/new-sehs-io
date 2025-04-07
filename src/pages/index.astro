@@ -14,8 +14,8 @@ import { Image } from "astro:assets";
 
 <Layout>
   <!-- Hero Unit -->
-  <div class="py-3 bg-black fuzzy mb-3">
-    <h1 class="text-center text-eds-green">St. Edward High School</h1>
+  <div class="bg-cyber-dark mb-3">
+    <h1 class="text-center text-eds-green pt-5">St. Edward High School</h1>
     <h4 class="text-center text-eds-gold">Computer science and Other Stuff</h4>
     <span x-data="logo">
       <Image
@@ -73,24 +73,6 @@ import { Image } from "astro:assets";
     </div>
   </section>
 </Layout>
-
-<style>
-  @keyframes shift {
-    0% {
-      background-position: -5% -5%;
-    }
-
-    100% {
-      background-position: 5% 5%;
-    }
-  }
-
-  .fuzzy {
-    background-image: url("/img/misc/noise-17.png");
-    animation: shift 0.2s linear infinite;
-    opacity: 100%;
-  }
-</style>
 
 <script>
   import Alpine from "alpinejs";
