@@ -6,18 +6,21 @@ import CyberListItem from "../../components/ui/CyberListItem.astro";
 ---
 
 <Layout>
-  <div class="p-5 mb-3 bg-cyber-dark">
-    <div class="my-3">
-      <a
-        href="/"
-        class="btn btn-sm btn-outline-light"
-        >← Back</a
-      >
+  <div class="mb-3">
+    <canvas id="animation"></canvas>
+    <div class="animation-background"></div>
+    <div class="p-5">
+      <a href="/" class="btn btn-sm btn-outline-light">← Back</a>
     </div>
-    <div class="container">
+    <div class="container pb-5">
       <div class="text-center">
         <h1 class="text-cyber-primary">Computer Organization</h1>
-        <Image src={compOrgLogo} class="my-4" width="128" alt="Computer Organization Logo" />
+        <Image
+          src={compOrgLogo}
+          class="my-4"
+          width="128"
+          alt="Computer Organization Logo"
+        />
       </div>
     </div>
   </div>
@@ -63,3 +66,78 @@ import CyberListItem from "../../components/ui/CyberListItem.astro";
     </ul>
   </div>
 </Layout>
+
+<style>
+  #animation {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .animation-background {
+    background-color: var(--cyber-darker);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -2;
+  }
+</style>
+
+<script>
+  (() => {
+    const FONT_SIZE = 16;
+    const BACKGROUND_COLOR = "rgb(5, 0, 20)";
+    const FADE_COLOR = "rgba(5, 0, 20, 0.1)";
+    const TEXT_COLOR = "rgba(0, 255, 0, 0.9)";
+    const CHARS = "0123456789ABCDEF";
+    const canvas = document.querySelector<HTMLCanvasElement>("#animation");
+    if (!canvas?.getContext) return;
+    const context = canvas.getContext("2d");
+    if (!context) return;
+    let columns = canvas.width / FONT_SIZE;
+    let dropCoordinates: number[] = [];
+
+    const initWindow = (canvas: HTMLCanvasElement) => {
+      if (!canvas.parentElement) return;
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = canvas.parentElement.clientHeight;
+      columns = canvas.width / FONT_SIZE;
+      context.fillStyle = BACKGROUND_COLOR;
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.font = FONT_SIZE + "px jetbrains";
+    };
+
+    initWindow(canvas);
+
+    for (let x = 0; x < columns; x++) {
+      dropCoordinates[x] = Math.trunc(canvas.height);
+    }
+
+    const draw = () => {
+      // If canvas size changes, reinitialize window
+      if (canvas.width !== canvas.parentElement?.clientWidth) {
+        initWindow(canvas);
+      }
+
+      // Clear
+      context.fillStyle = FADE_COLOR;
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.fillStyle = TEXT_COLOR;
+
+      for (let i = 0; i < dropCoordinates.length; i++) {
+        const text = CHARS.charAt(Math.floor(Math.random() * CHARS.length));
+        context.fillText(text, i * FONT_SIZE, dropCoordinates[i] * FONT_SIZE);
+
+        // Reset Y coordinate if exceeds bottom
+        if (dropCoordinates[i] * FONT_SIZE > canvas.height && Math.random() > 0.975) {
+          dropCoordinates[i] = 0;
+        }
+
+        dropCoordinates[i]++;
+      }
+    };
+
+    setInterval(draw, 50);
+  })();
+</script>
