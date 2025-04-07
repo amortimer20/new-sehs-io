@@ -1,3 +1,14 @@
+/* Standard input */
+.form-control {
+  border-radius: 0;
+  background-color: var(--cyber-darker);
+
+  &:focus {
+    background-color: var(--cyber-darker);
+    border-color: var(--cyber-primary);
+  }
+}
+
 /* Range */
 .form-range::-webkit-slider-thumb {
   background-color: var(--cyber-primary);
