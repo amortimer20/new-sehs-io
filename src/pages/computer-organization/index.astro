@@ -6,13 +6,12 @@ import CyberListItem from "../../components/ui/CyberListItem.astro";
 ---
 
 <Layout>
-  <div class="mb-3">
+  <div class="mb-3 bg-cyber-darker">
     <canvas id="animation"></canvas>
-    <div class="animation-background"></div>
-    <div class="p-5">
+    <div class="p-5 animation-overlay">
       <a href="/" class="btn btn-sm btn-outline-light">← Back</a>
     </div>
-    <div class="container pb-5">
+    <div class="container pb-5 animation-overlay">
       <div class="text-center">
         <h1 class="text-cyber-primary">Computer Organization</h1>
         <Image
@@ -68,25 +67,20 @@ import CyberListItem from "../../components/ui/CyberListItem.astro";
 </Layout>
 
 <style>
-  #animation {
+  canvas#animation {
     position: absolute;
-    z-index: -1;
   }
 
-  .animation-background {
-    background-color: var(--cyber-darker);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    z-index: -2;
+  .animation-overlay {
+    position: relative;
+    z-index: 1;
   }
 </style>
 
 <script>
   (() => {
     const FONT_SIZE = 16;
+    const FONT_STYLE = FONT_SIZE + "px jetbrains";
     const BACKGROUND_COLOR = "rgb(5, 0, 20)";
     const FADE_COLOR = "rgba(5, 0, 20, 0.1)";
     const TEXT_COLOR = "rgba(0, 255, 0, 0.9)";
@@ -95,27 +89,27 @@ import CyberListItem from "../../components/ui/CyberListItem.astro";
     if (!canvas?.getContext) return;
     const context = canvas.getContext("2d");
     if (!context) return;
+
     let columns = canvas.width / FONT_SIZE;
-    let dropCoordinates: number[] = [];
+    let dropCoords: number[] = [];
 
     const initWindow = (canvas: HTMLCanvasElement) => {
-      if (!canvas.parentElement) return;
-      canvas.width = canvas.parentElement.clientWidth;
-      canvas.height = canvas.parentElement.clientHeight;
+      canvas.width = canvas.parentElement?.clientWidth ?? canvas.width;
+      canvas.height = canvas.parentElement?.clientHeight ?? canvas.height;
       columns = canvas.width / FONT_SIZE;
       context.fillStyle = BACKGROUND_COLOR;
       context.fillRect(0, 0, canvas.width, canvas.height);
-      context.font = FONT_SIZE + "px jetbrains";
+      context.font = FONT_STYLE;
+
+      for (let x = 0; x < columns; x++) {
+        dropCoords[x] = Math.trunc(canvas.height);
+      }
     };
 
     initWindow(canvas);
 
-    for (let x = 0; x < columns; x++) {
-      dropCoordinates[x] = Math.trunc(canvas.height);
-    }
-
     const draw = () => {
-      // If canvas size changes, reinitialize window
+      // Reinitialize window if canvas size changes
       if (canvas.width !== canvas.parentElement?.clientWidth) {
         initWindow(canvas);
       }
@@ -125,16 +119,19 @@ import CyberListItem from "../../components/ui/CyberListItem.astro";
       context.fillRect(0, 0, canvas.width, canvas.height);
       context.fillStyle = TEXT_COLOR;
 
-      for (let i = 0; i < dropCoordinates.length; i++) {
-        const text = CHARS.charAt(Math.floor(Math.random() * CHARS.length));
-        context.fillText(text, i * FONT_SIZE, dropCoordinates[i] * FONT_SIZE);
+      for (let i = 0; i < dropCoords.length; i++) {
+        const text = CHARS[Math.floor(Math.random() * CHARS.length)];
+        context.fillText(text, i * FONT_SIZE, dropCoords[i] * FONT_SIZE);
 
         // Reset Y coordinate if exceeds bottom
-        if (dropCoordinates[i] * FONT_SIZE > canvas.height && Math.random() > 0.975) {
-          dropCoordinates[i] = 0;
+        if (
+          dropCoords[i] * FONT_SIZE > canvas.height &&
+          Math.random() > 0.975
+        ) {
+          dropCoords[i] = 0;
         }
 
-        dropCoordinates[i]++;
+        dropCoords[i]++;
       }
     };
 
