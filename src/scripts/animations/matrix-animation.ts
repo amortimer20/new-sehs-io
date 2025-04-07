@@ -1,0 +1,57 @@
+export function matrixAnimation(canvasId: string) {
+  const FONT_SIZE = 16;
+  const FONT_STYLE = FONT_SIZE + "px jetbrains";
+  const BACKGROUND_COLOR = "rgb(5, 0, 20)";
+  const FADE_COLOR = "rgba(5, 0, 20, 0.1)";
+  const TEXT_COLOR = "rgba(0, 255, 0, 0.7)";
+  const CHARS = "0123456789ABCDEF";
+  const canvas = document.querySelector<HTMLCanvasElement>(`#${canvasId}`);
+
+  if (!canvas?.getContext) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  let columns = canvas.width / FONT_SIZE;
+  let coords: number[] = [];
+
+  const initWindow = (canvas: HTMLCanvasElement) => {
+    canvas.width = canvas.parentElement?.clientWidth ?? canvas.width;
+    canvas.height = canvas.parentElement?.clientHeight ?? canvas.height;
+    columns = canvas.width / FONT_SIZE;
+    ctx.fillStyle = BACKGROUND_COLOR;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = FONT_STYLE;
+
+    for (let x = 0; x < columns; x++) {
+      coords[x] = Math.trunc(canvas.height);
+    }
+  };
+
+  initWindow(canvas);
+
+  const draw = () => {
+    // Reinitialize window if canvas size changes
+    if (canvas.width !== canvas.parentElement?.clientWidth) {
+      initWindow(canvas);
+    }
+
+    // Clear
+    ctx.fillStyle = FADE_COLOR;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = TEXT_COLOR;
+
+    for (let i = 0; i < coords.length; i++) {
+      const text = CHARS[Math.floor(Math.random() * CHARS.length)];
+      ctx.fillText(text, i * FONT_SIZE, coords[i] * FONT_SIZE);
+
+      // Reset Y coordinate if exceeds bottom
+      if (coords[i] * FONT_SIZE > canvas.height && Math.random() > 0.95) {
+        coords[i] = 0;
+      }
+
+      coords[i]++;
+    }
+  };
+
+  setInterval(draw, 50);
+};

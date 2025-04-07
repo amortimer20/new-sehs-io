@@ -7,3 +7,8 @@
 @import "./_forms.css";
 
 [x-cloak] { display: none !important; }
+
+.animation-overlay {
+  position: relative;
+  z-index: 1;
+}
