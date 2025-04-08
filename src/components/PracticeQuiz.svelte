@@ -57,10 +57,7 @@
 
   function beginNextQuestion() {
     currentQuestion = questions[++currentQuestionIndex];
-    isQuestionComplete = false;
-    responseHTML = "<p>&nbsp;</p>";
-    submittedAnswer = "";
-    isCorrectOnFirstTry = true;
+    resetQuestionState();
   }
 
   function restartPractice() {
@@ -68,11 +65,15 @@
     questionsAnswered = 0;
     currentQuestion = questions[0];
     currentQuestionIndex = 0;
+    displayScore = false;
+    resetQuestionState();
+  }
+
+  function resetQuestionState() {
     isQuestionComplete = false;
     responseHTML = "<p>&nbsp;</p>";
     submittedAnswer = "";
     isCorrectOnFirstTry = true;
-    displayScore = false;
   }
 </script>
 
