@@ -15,50 +15,40 @@ import { Image } from "astro:assets";
 <Layout>
   <!-- Hero Unit -->
   <div class="bg-cyber-dark mb-3">
-    <canvas id="matrix"></canvas>
+    <canvas id="matrix" style="position: absolute;"></canvas>
     <h1 class="text-center text-eds-green pt-5 animation-overlay">
       St. Edward High School
     </h1>
     <h4 class="text-center text-eds-gold animation-overlay">
       Computer science and Other Stuff
     </h4>
-    <span x-data="logo">
-      <Image
-        id="skynestLogo"
-        src={skynestLogo}
-        class="d-block mx-auto img-fluid w-25 animation-overlay"
-        alt="SkyNest Logo"
-        title="Click Me"
-        @click="accelerate"
-        @mouseout="decelerate"
-      />
-    </span>
+    <Image
+      id="skynestLogo"
+      src={skynestLogo}
+      class="d-block mx-auto img-fluid w-25 animation-overlay"
+      alt="SkyNest Logo"
+      title="Click Me"
+    />
   </div>
   <section class="container mb-3 p-1">
     <!-- Course Content -->
     <h3 class="text-center py-3">Content</h3>
     <div class="row mb-3">
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
-        <CourseCard link="#" img={pythonImg} , title="Python Programming" />
+        <CourseCard link="#" img={pythonImg} title="Python Programming" />
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
         <CourseCard
           link="/computer-organization/"
           img={compOrgImg}
-          ,
           title="Computer Organization"
         />
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
-        <CourseCard link="#" img={javaImg} , title="Computer Organization" />
+        <CourseCard link="#" img={javaImg} title="Java Programming" />
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
-        <CourseCard
-          link="#"
-          img={codeChallImg}
-          ,
-          title="Computer Organization"
-        />
+        <CourseCard link="#" img={codeChallImg} title="Code Challenges" />
       </div>
     </div>
     <Divider variant="9" />
@@ -79,31 +69,26 @@ import { Image } from "astro:assets";
   </section>
 </Layout>
 
-<style>
-  canvas#matrix {
-    position: absolute;
-  }
-</style>
-
 <script>
-  import Alpine from "alpinejs";
   import { animate } from "animejs";
   import { matrixAnimation } from "../scripts/animations/matrix-animation";
 
   matrixAnimation("matrix");
 
   // Spinning Logo
-  document.addEventListener("alpine:init", () => {
-    Alpine.data("logo", () => ({
-      acceleration: 0,
-      accelerate() {
-        animate(this.$el, { rotate: `+=${this.acceleration}` });
-        this.acceleration += 10;
-      },
-      decelerate() {
-        animate(this.$el, { rotate: `0` });
-        this.acceleration = 0;
-      },
-    }));
-  });
+  (() => {
+    let delta = 0;
+    const logo = document.querySelector<HTMLImageElement>("#skynestLogo");
+    if (!logo) return;
+
+    logo.onclick = (ev) => {
+      delta += 10;
+      animate(logo, { rotate: `+=${delta}` });
+    };
+
+    logo.onmouseout = (ev) => {
+      animate(logo, { rotate: 0 });
+      delta = 0;
+    };
+  })();
 </script>

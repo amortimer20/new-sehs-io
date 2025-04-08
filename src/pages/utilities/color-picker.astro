@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import RGBColorPicker from "../../components/interactives/RGBColorPicker.astro";
+import RGBColorPicker from "../../components/interactives/ColorPicker.svelte";
 
 import colorPickerImage from "../../assets/img/utilities/rgb-icon.png";
 import { Image } from "astro:assets";
@@ -21,8 +21,8 @@ import Divider from "../../components/ui/Divider.astro";
       </div>
     </div>
     <div class="row mb-5">
-      <div class="col-sm-12 col-md-8 offset-md-2 p-1">
-        <RGBColorPicker />
+      <div class="col">
+        <RGBColorPicker client:load />
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 ---
-import AsciiBinaryConverter from "../../components/interactives/AsciiBinaryConverter.astro";
+import AsciiConverter from "../../components/interactives/AsciiConverter.svelte";
 import Divider from "../../components/ui/Divider.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
@@ -16,7 +16,7 @@ import Layout from "../../layouts/Layout.astro";
     <div class="row">
       <div class="col">
         <h3>ASCII to Binary Converter</h3>
-        <AsciiBinaryConverter />
+        <AsciiConverter client:visible />
       </div>
     </div>
     <Divider variant="8" classes="my-4" />

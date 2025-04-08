@@ -13,3 +13,16 @@
 .form-range::-webkit-slider-thumb {
   background-color: var(--cyber-primary);
 }
+
+/* Checkboxes */
+.form-check-input[type=checkbox] {
+  border-radius: 0;
+
+  &:focus {
+    border-color: var(--cyber-primary);
+  }
+
+  &:checked {
+    background-color: var(--cyber-primary-darken);
+  }
+}
