@@ -1,7 +1,7 @@
 ---
 import Divider from "../../components/ui/Divider.astro";
-import PracticeSet from "../../components/PracticeSet.astro";
 import Layout from "../../layouts/Layout.astro";
+import PracticeQuiz from "../../components/PracticeQuiz.svelte";
 ---
 
 <Layout>
@@ -23,7 +23,7 @@ import Layout from "../../layouts/Layout.astro";
     </div>
     <div class="row my-5">
       <div class="col-sm-12 col-md-6 offset-md-3">
-        <PracticeSet dataUrl="/json/dec-bin-3.json" />
+        <PracticeQuiz dataUrl="/json/dec-bin-3.json" isShuffled={true} client:load />
       </div>
     </div>
   </div>

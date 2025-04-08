@@ -10,10 +10,7 @@
     "deploy": "astro build && firebase deploy"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.4",
     "@astrojs/svelte": "^7.0.9",
-    "@types/alpinejs": "^3.13.11",
-    "alpinejs": "^3.14.9",
     "animejs": "^4.0.0",
     "astro": "^5.5.4",
     "bootstrap": "^5.3.3",
