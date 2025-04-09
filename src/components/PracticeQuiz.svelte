@@ -1,5 +1,7 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { shuffle } from "../scripts/utilities";
+  import { fade } from "svelte/transition";
 
   interface Question {
     text: string;
@@ -18,25 +20,21 @@
   let submittedAnswer = $state("");
   let isQuestionComplete = $state(false);
   let isCorrectOnFirstTry = $state(true);
-  let displayScore = $state(false);
+  let practiceEnded = $state(false);
   let questionsAnswered = $state(0);
   let score = $state(0);
   let responseStyle = $state(""); // refactor later
   let responseHTML = $state("<p>&nbsp;</p>");
-  let isPracticeComplete = $derived(questionsAnswered === questions.length);
+  let allQuestionsComplete = $derived(questionsAnswered === questions.length);
 
-  function beginPractice() {
+  onMount(() => {
     fetch(dataUrl)
       .then((res) => res.json())
       .then((data) => {
         questions = data;
-
-        if (questions.length > 0) {
-          if (isShuffled) shuffle(questions);
-          currentQuestion = questions[0];
-        }
+        if (isShuffled) shuffle(questions);
       });
-  }
+  });
 
   function submitAnswer() {
     if (!currentQuestion || submittedAnswer == "") return;
@@ -65,7 +63,7 @@
     questionsAnswered = 0;
     currentQuestion = questions[0];
     currentQuestionIndex = 0;
-    displayScore = false;
+    practiceEnded = false;
     resetQuestionState();
   }
 
@@ -75,67 +73,70 @@
     submittedAnswer = "";
     isCorrectOnFirstTry = true;
   }
+
+  function beginPractice() {
+    if (questions.length === 0) return;
+    currentQuestion = questions[0];
+  }
 </script>
 
 <section>
-  {#if questions.length === 0}
-    <div class="card p-5">
-      <button class="btn btn-outline-primary" onclick={beginPractice}>
-        Begin Practice
-      </button>
+  {#if practiceEnded}
+    <div class="card">
+      <div class="card-header"><p class="h5">&nbsp;</p></div>
+      <div class="card-body">
+        <p class="text-center">Score: {score}/{questions.length}</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-outline-primary" onclick={restartPractice}>
+          Restart Practice
+        </button>
+      </div>
+    </div>
+  {:else if currentQuestion}
+    <div class="card" in:fade>
+      <div class="card-header">
+        <p class="h5">
+          #{currentQuestionIndex + 1}&rpar;
+          {@html currentQuestion.text}
+        </p>
+      </div>
+      <div class="card-body">
+        <label class="form-label" for="answer">Answer: </label>
+        <input id="answer" class="form-control" bind:value={submittedAnswer} />
+        <p class={responseStyle}>{@html responseHTML}</p>
+        <p>Score: {score}/{questions.length}</p>
+      </div>
+      <div class="card-footer">
+        {#if allQuestionsComplete}
+          <button
+            class="btn btn-outline-primary"
+            onclick={() => {
+              practiceEnded = true;
+            }}
+          >
+            End Practice
+          </button>
+        {:else if isQuestionComplete}
+          <button class="btn btn-outline-primary" onclick={beginNextQuestion}>
+            Next Question
+          </button>
+        {:else}
+          <button class="btn btn-outline-primary" onclick={submitAnswer}>
+            Submit
+          </button>
+        {/if}
+      </div>
     </div>
   {:else}
     <div class="card">
-      <div class="card-header">
-        <p class="text-center h5">
-          (#{currentQuestionIndex + 1} of {questions.length})
-          {#if currentQuestion}
-            {@html currentQuestion.text}
-          {/if}
-        </p>
+      <div class="card-header"><p class="h5">&nbsp;</p></div>
+      <div class="card-body d-grid gap-2 my-5">
+        <button class="btn btn-outline-primary" onclick={beginPractice}>
+          Begin Practice
+        </button>
       </div>
-      {#if displayScore}
-        <div class="card-body">
-          <p class="text-center">Score: {score}/{questions.length}</p>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-outline-primary" onclick={restartPractice}>
-            Restart Practice
-          </button>
-        </div>
-      {:else}
-        <div class="card-body">
-          <label class="form-label" for="answer">Answer: </label>
-          <input
-            id="answer"
-            class="form-control"
-            bind:value={submittedAnswer}
-          />
-          <p class={responseStyle}>{@html responseHTML}</p>
-          <p>Score: {score}</p>
-        </div>
-        <div class="card-footer">
-          {#if isQuestionComplete && !isPracticeComplete}
-            <button class="btn btn-outline-primary" onclick={beginNextQuestion}>
-              Next Question
-            </button>
-          {:else if isPracticeComplete}
-            <button
-              class="btn btn-outline-primary"
-              onclick={() => {
-                displayScore = true;
-              }}
-            >
-              End Practice
-            </button>
-          {:else}
-            <!-- if !isQuestionComplete (may be needed?)-->
-            <button class="btn btn-outline-primary" onclick={submitAnswer}>
-              Submit
-            </button>
-          {/if}
-        </div>
-      {/if}
+      <div class="card-footer"><p class="h5">&nbsp;</p></div>
     </div>
   {/if}
 </section>
