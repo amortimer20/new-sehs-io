@@ -6,10 +6,10 @@ import CourseCard from "../components/ui/CourseCard.astro";
 import Divider from "../components/ui/Divider.astro";
 import CyberListItem from "../components/ui/CyberListItem.astro";
 
-import codeChallImg from "../assets/courses/code-challenges/img/code-challenges-thumbnail.png";
-import compOrgImg from "../assets/courses/computer-organization/img/computer-organization-thumbnail.png";
-import javaImg from "../assets/courses/java-programming/img/java-thumbnail.png";
-import pythonImg from "../assets/courses/python-programming/img/python-thumbnail.png";
+import codeChallImg from "../assets/courses/code-challenges/img/code-challenges-thumbnail.svg";
+import compOrgImg from "../assets/courses/computer-organization/img/computer-organization-thumbnail.svg";
+import javaImg from "../assets/courses/java-programming/img/java-thumbnail.svg";
+import pythonImg from "../assets/courses/python-programming/img/python-thumbnail.svg";
 import skynestLogo from "../assets/img/misc/skynest-emblem-green.svg";
 ---
 
@@ -57,6 +57,11 @@ import skynestLogo from "../assets/img/misc/skynest-emblem-green.svg";
     <div class="row mb-3">
       <div class="col-sm-12 col-md-6">
         <h4 class="text-center py-3">Links</h4>
+        <ul>
+          <CyberListItem>
+            <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+          </CyberListItem>
+        </ul>
       </div>
       <div class="col-sm-12 col-md-6">
         <h4 class="text-center py-3">Utilities</h4>

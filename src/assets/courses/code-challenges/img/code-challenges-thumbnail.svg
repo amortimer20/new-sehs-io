@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 358 245" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:square;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-71.4321,-77.6912)">
+        <g id="Thumbnail" transform="matrix(1,0,0,0.997716,8.52651e-14,0.185676)">
+            <g id="Window" transform="matrix(0.155423,0,0,0.155423,211.182,175.526)">
+                <g transform="matrix(6.43405,0,0,6.44878,-1358.75,-1130.54)">
+                    <path d="M75.038,81.297L75.038,318.703L425.038,318.522L425.038,108.277L398.185,81.424L75.038,81.297Z" style="fill:rgb(5,0,20);stroke:white;stroke-width:4px;"/>
+                </g>
+                <g transform="matrix(2.94628,2.95302,2.94628,-2.95302,181.65,745.346)">
+                    <path d="M-17.638,-7.355L52.985,-7.355L17.673,-42.667L-52.783,-42.665L-17.638,-7.355Z" style="fill:white;fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(2.94628,2.95302,2.94628,-2.95302,-99.2013,745.346)">
+                    <path d="M-17.638,-7.355L52.985,-7.355L17.673,-42.667L-52.783,-42.665L-17.638,-7.355Z" style="fill:white;fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(2.94628,2.95302,2.94628,-2.95302,-380.053,745.346)">
+                    <path d="M-17.638,-7.355L52.985,-7.355L17.673,-42.667L-52.783,-42.665L-17.638,-7.355Z" style="fill:white;fill-rule:nonzero;"/>
+                </g>
+            </g>
+            <g id="Triangle" transform="matrix(1.10073,0,0,1.10073,276.62,213.849)">
+                <g transform="matrix(0.798065,0,0,0.799892,70.409,67.1293)">
+                    <path d="M0,-13.609L0,-8.841L-20.767,-8.841L-20.767,-13.609L-50.691,-13.609L-62.241,-6.941C-61.256,-3.265 -61.366,-3.676 -60.381,0L39.615,0C40.6,-3.676 40.489,-3.265 41.475,-6.941L29.926,-13.609L0,-13.609Z" style="fill:rgb(255,0,0);fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(0.798065,0,0,0.799892,66.6478,52.2328)">
+                    <path d="M0,-87.96L0,-74.624L14.963,-48.708L19.092,-51.092L29.476,-33.108L25.346,-30.724L40.309,-4.808L51.858,1.86C54.549,-0.831 54.248,-0.53 56.939,-3.221L6.941,-89.82C3.266,-88.835 3.677,-88.945 0,-87.96" style="fill:rgb(255,0,0);fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(0.798065,0,0,0.799892,37.3695,6.46726)">
+                    <path d="M0,26.512L-4.129,24.128L6.254,6.144L10.383,8.528L25.346,-17.388L25.346,-30.724C21.67,-31.709 22.081,-31.599 18.404,-32.584L-31.594,54.015C-28.902,56.706 -29.203,56.405 -26.512,59.096L-14.963,52.429L0,26.512Z" style="fill:rgb(255,0,0);fill-rule:nonzero;"/>
+                </g>
+            </g>
+            <g id="Title" transform="matrix(1,0,0,1,9.36487,11.2595)">
+                <text x="89.695px" y="128.78px" style="font-family:'Terminator';font-weight:500;font-size:20px;fill:white;">CODE</text>
+                <g transform="matrix(20,0,0,20,316.815,148.78)">
+                </g>
+                <text x="89.695px" y="148.78px" style="font-family:'Terminator';font-weight:500;font-size:20px;fill:white;">CHALLENGES</text>
+            </g>
+        </g>
+    </g>
+</svg>

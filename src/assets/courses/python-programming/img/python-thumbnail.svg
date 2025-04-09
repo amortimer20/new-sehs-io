@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 352 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-74,-80.2968)">
+        <g id="Thumbnail">
+            <g id="Window">
+                <g transform="matrix(1.76647,0,0,1.78076,-1138.04,-215.492)">
+                    <path d="M884.834,177.084L884.834,299.981L686.72,299.981L686.699,177.084L884.834,177.084Z" style="fill:rgb(5,0,20);stroke:white;stroke-width:1.13px;"/>
+                </g>
+                <g transform="matrix(1.11843,0,0,1.11843,-693.279,-106.557)">
+                    <path d="M686.927,184.553L686.927,167.962L989.435,167.962L999.866,178.492L999.866,184.553L686.927,184.553Z" style="fill:white;stroke:white;stroke-width:1.79px;"/>
+                </g>
+            </g>
+            <g id="Title" transform="matrix(1,0,0,1,9.36487,11.2595)">
+                <text x="89.695px" y="128.78px" style="font-family:'Terminator';font-weight:500;font-size:20px;fill:white;">PROGRAMMING</text>
+                <g transform="matrix(20,0,0,20,316.615,148.78)">
+                </g>
+                <text x="89.695px" y="148.78px" style="font-family:'Terminator';font-weight:500;font-size:20px;fill:white;">WITH PYTHON</text>
+            </g>
+            <g id="Python-Logo" serif:id="Python Logo">
+                <g id="path1948" transform="matrix(1,0,0,1,288.839,181.611)">
+                    <path d="M54.919,0.001C50.335,0.022 45.958,0.413 42.106,1.095C30.76,3.099 28.7,7.295 28.7,15.032L28.7,25.251L55.513,25.251L55.513,28.657L18.638,28.657C10.845,28.657 4.022,33.341 1.888,42.251C-0.574,52.464 -0.683,58.837 1.888,69.501C3.793,77.439 8.345,83.095 16.138,83.095L25.356,83.095L25.356,70.845C25.356,61.995 33.013,54.188 42.106,54.188L68.888,54.188C76.342,54.188 82.294,48.05 82.294,40.563L82.294,15.032C82.294,7.766 76.164,2.307 68.888,1.095C64.282,0.328 59.502,-0.02 54.919,0.001ZM40.419,8.22C43.188,8.22 45.45,10.518 45.45,13.345C45.45,16.161 43.188,18.438 40.419,18.438C37.639,18.438 35.388,16.161 35.388,13.345C35.388,10.518 37.639,8.22 40.419,8.22Z" style="fill:url(#_Linear1);fill-rule:nonzero;"/>
+                </g>
+                <g id="path1950" transform="matrix(1,0,0,1,288.839,181.611)">
+                    <path d="M85.638,28.657L85.638,40.563C85.638,49.794 77.812,57.563 68.888,57.563L42.106,57.563C34.77,57.563 28.7,63.842 28.7,71.188L28.7,96.72C28.7,103.986 35.019,108.26 42.106,110.345C50.594,112.84 58.733,113.291 68.888,110.345C75.638,108.39 82.294,104.457 82.294,96.72L82.294,86.501L55.513,86.501L55.513,83.095L95.7,83.095C103.493,83.095 106.396,77.659 109.106,69.501C111.906,61.102 111.787,53.025 109.106,42.251C107.181,34.493 103.502,28.657 95.7,28.657L85.638,28.657ZM70.575,93.313C73.355,93.313 75.606,95.591 75.606,98.407C75.606,101.234 73.355,103.532 70.575,103.532C67.805,103.532 65.544,101.234 65.544,98.407C65.544,95.591 67.805,93.313 70.575,93.313Z" style="fill:url(#_Linear2);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(61.3261,53.2723,-53.2723,61.3261,-3.31083e-07,-2.97868e-07)"><stop offset="0" style="stop-color:rgb(90,159,212);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(48,105,152);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-21.8995,-31.2832,31.2832,-21.8995,69.9307,97.548)"><stop offset="0" style="stop-color:rgb(255,212,59);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(255,232,115);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>
