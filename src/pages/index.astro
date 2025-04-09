@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 import Layout from "../layouts/Layout.astro";
 import CourseCard from "../components/ui/CourseCard.astro";
 import Divider from "../components/ui/Divider.astro";
@@ -9,7 +11,6 @@ import compOrgImg from "../assets/courses/computer-organization/img/computer-org
 import javaImg from "../assets/courses/java-programming/img/java-thumbnail.png";
 import pythonImg from "../assets/courses/python-programming/img/python-thumbnail.png";
 import skynestLogo from "../assets/img/misc/skynest-emblem-green.svg";
-import { Image } from "astro:assets";
 ---
 
 <Layout>
@@ -20,7 +21,7 @@ import { Image } from "astro:assets";
       St. Edward High School
     </h1>
     <h4 class="text-center text-eds-gold animation-overlay">
-      Computer science and Other Stuff
+      Computer science and Engineering
     </h4>
     <Image
       id="skynestLogo"
@@ -52,10 +53,10 @@ import { Image } from "astro:assets";
       </div>
     </div>
     <Divider variant="9" />
-    <!-- Guides/Utilities -->
+    <!-- Links/Utilities -->
     <div class="row mb-3">
       <div class="col-sm-12 col-md-6">
-        <h4 class="text-center py-3">Guides</h4>
+        <h4 class="text-center py-3">Links</h4>
       </div>
       <div class="col-sm-12 col-md-6">
         <h4 class="text-center py-3">Utilities</h4>
