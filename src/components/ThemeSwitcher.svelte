@@ -35,17 +35,18 @@
 <!-- svelte-ignore a11y_invalid_attribute -->
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+<!-- svelte-ignore a11y_consider_explicit_label -->
 <div class="dropdown">
   <button
-    class="btn btn-sm btn-outline-primary dropdown-toggle"
+    class="btn dropdown-toggle"
     type="button"
     data-bs-toggle="dropdown"
     data-bs-auto-close="outside"
     aria-expanded="false"
   >
-    Theme
+    <i class="bi bi-diamond-half" style="color: var(--color-theme);"></i>
   </button>
-  <ul class="dropdown-menu dropdown-menu-end">
+  <ul class="dropdown-menu">
     <li
       class="dropdown-item"
       onclick={() => {
@@ -53,7 +54,7 @@
       }}
     >
       <a href="#" style="color: var(--cyber-primary);"
-        ><i class="bi bi-square-fill"></i> Primary</a
+        ><i class="bi bi-diamond-half"></i></a
       >
     </li>
     <li
@@ -63,7 +64,7 @@
       }}
     >
       <a href="#" style="color: var(--cyber-red);"
-        ><i class="bi bi-square-fill"></i> Red</a
+        ><i class="bi bi-diamond-half"></i></a
       >
     </li>
     <li
@@ -73,58 +74,64 @@
       }}
     >
       <a href="#" style="color: var(--cyber-green);"
-        ><i class="bi bi-square-fill"></i> Green</a
+        ><i class="bi bi-diamond-half"></i></a
       >
     </li>
     <li
-    class="dropdown-item"
-    onclick={() => {
-      setColorTheme("cyber-blue");
-    }}
-  >
-    <a href="#" style="color: var(--cyber-blue);"
-      ><i class="bi bi-square-fill"></i> Blue</a
+      class="dropdown-item"
+      onclick={() => {
+        setColorTheme("cyber-blue");
+      }}
     >
-  </li>
-  <li
-    class="dropdown-item"
-    onclick={() => {
-      setColorTheme("cyber-purple");
-    }}
-  >
-    <a href="#" style="color: var(--cyber-purple);"
-      ><i class="bi bi-square-fill"></i> Purple</a
+      <a href="#" style="color: var(--cyber-blue);"
+        ><i class="bi bi-diamond-half"></i></a
+      >
+    </li>
+    <li
+      class="dropdown-item"
+      onclick={() => {
+        setColorTheme("cyber-purple");
+      }}
     >
-  </li>
-  <li
-    class="dropdown-item"
-    onclick={() => {
-      setColorTheme("cyber-gold");
-    }}
-  >
-    <a href="#" style="color: var(--cyber-gold);"
-      ><i class="bi bi-square-fill"></i> Gold</a
+      <a href="#" style="color: var(--cyber-purple);"
+        ><i class="bi bi-diamond-half"></i></a
+      >
+    </li>
+    <li
+      class="dropdown-item"
+      onclick={() => {
+        setColorTheme("cyber-gold");
+      }}
     >
-  </li>
-  <li
-    class="dropdown-item"
-    onclick={() => {
-      setColorTheme("cyber-orange");
-    }}
-  >
-    <a href="#" style="color: var(--cyber-orange);"
-      ><i class="bi bi-square-fill"></i> Orange</a
+      <a href="#" style="color: var(--cyber-gold);"
+        ><i class="bi bi-diamond-half"></i></a
+      >
+    </li>
+    <li
+      class="dropdown-item"
+      onclick={() => {
+        setColorTheme("cyber-orange");
+      }}
     >
-  </li>
-  <li
-    class="dropdown-item"
-    onclick={() => {
-      setColorTheme("cyber-yellow");
-    }}
-  >
-    <a href="#" style="color: var(--cyber-yellow);"
-      ><i class="bi bi-square-fill"></i> Yellow</a
+      <a href="#" style="color: var(--cyber-orange);"
+        ><i class="bi bi-diamond-half"></i></a
+      >
+    </li>
+    <li
+      class="dropdown-item"
+      onclick={() => {
+        setColorTheme("cyber-yellow");
+      }}
     >
-  </li>
+      <a href="#" style="color: var(--cyber-yellow);"
+        ><i class="bi bi-diamond-half"></i></a
+      >
+    </li>
   </ul>
 </div>
+
+<style>
+  .dropdown-menu {
+    --bs-dropdown-min-width: 0;
+  }
+</style>
