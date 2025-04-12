@@ -80,15 +80,27 @@
         </td>
       </tr>
       <tr class="text-center">
-        <td>2<sup>7</sup></td>
-        <td>2<sup>6</sup></td>
-        <td>2<sup>5</sup></td>
-        <td>2<sup>4</sup></td>
+        <td class="text-secondary">2<sup>7</sup></td>
+        <td class="text-secondary">2<sup>6</sup></td>
+        <td class="text-secondary">2<sup>5</sup></td>
+        <td class="text-secondary">2<sup>4</sup></td>
         <td colspan="2"></td>
-        <td>2<sup>3</sup></td>
-        <td>2<sup>2</sup></td>
-        <td>2<sup>1</sup></td>
-        <td>2<sup>0</sup></td>
+        <td class="text-secondary">2<sup>3</sup></td>
+        <td class="text-secondary">2<sup>2</sup></td>
+        <td class="text-secondary">2<sup>1</sup></td>
+        <td class="text-secondary">2<sup>0</sup></td>
+        <td></td>
+      </tr>
+      <tr class="text-center">
+        <td style:color={toggles[7] ? "var(--color-theme)" : "gray"}>128</td>
+        <td style:color={toggles[6] ? "var(--color-theme)" : "gray"}>64</td>
+        <td style:color={toggles[5] ? "var(--color-theme)" : "gray"}>32</td>
+        <td style:color={toggles[4] ? "var(--color-theme)" : "gray"}>16</td>
+        <td colspan="2"></td>
+        <td style:color={toggles[3] ? "var(--color-theme)" : "gray"}>8</td>
+        <td style:color={toggles[2] ? "var(--color-theme)" : "gray"}>4</td>
+        <td style:color={toggles[1] ? "var(--color-theme)" : "gray"}>2</td>
+        <td style:color={toggles[0] ? "var(--color-theme)" : "gray"}>1</td>
         <td></td>
       </tr>
     </tbody>
