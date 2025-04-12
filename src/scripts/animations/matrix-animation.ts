@@ -35,7 +35,7 @@ export function matrixAnimation(canvasId: string) {
       initWindow(canvas);
     }
 
-    // Clear
+    // Fade each frame
     ctx.fillStyle = FADE_COLOR;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = sessionStorage.getItem("color-theme") ?? "rgb(27, 212, 215)";
@@ -43,6 +43,11 @@ export function matrixAnimation(canvasId: string) {
     for (let i = 0; i < coords.length; i++) {
       const text = CHARS[Math.floor(Math.random() * CHARS.length)];
       ctx.fillText(text, i * FONT_SIZE, coords[i] * FONT_SIZE);
+
+      // Clear faded column cells
+      ctx.fillStyle = "rgb(5, 0, 20)";
+      ctx.fillRect(i * FONT_SIZE, coords[i] * FONT_SIZE + -FONT_SIZE * 24, FONT_SIZE, FONT_SIZE);
+      ctx.fillStyle = sessionStorage.getItem("color-theme") ?? "rgb(27, 212, 215)";
 
       // Reset Y coordinate if exceeds bottom
       if (coords[i] * FONT_SIZE > canvas.height && Math.random() > 0.95) {
