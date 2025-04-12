@@ -1,25 +1,42 @@
 ---
-import "../styles/site.css"
+import ThemeSwitcher from "../components/ThemeSwitcher.svelte";
+
+import "../styles/site.css";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>sehs.io</title>
-	</head>
-	<body data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>sehs.io</title>
+    <script>
+      import { initializeTheme } from "../scripts/theme";
+
+      initializeTheme();
+    </script>
+  </head>
+  <body data-bs-theme="dark">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-black">
       <div class="container-fluid">
         <a href="/" class="navbar-brand">
-        <span class="text-cyber-primary">E:\&gt;</span><span class="cursor text-cyber-danger">_</span>
+          <span class="text-primary">E:\sehs-io&gt;</span><span class="cursor"
+            >_</span
+          >
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto">
@@ -27,12 +44,16 @@ import "../styles/site.css"
               <a href="/" class="nav-link">\Home</a>
             </li>
           </ul>
+          <ThemeSwitcher client:load />
         </div>
       </div>
     </nav>
-		<slot />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	</body>
+    <slot />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+  </body>
 </html>
 
 <style>

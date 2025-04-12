@@ -5,13 +5,13 @@
 
   &:focus {
     background-color: var(--cyber-darker);
-    border-color: var(--cyber-primary);
+    border-color: var(--color-theme);
   }
 }
 
 /* Range */
 .form-range::-webkit-slider-thumb {
-  background-color: var(--cyber-primary);
+  background-color: var(--color-theme);
 }
 
 /* Checkboxes */
@@ -19,10 +19,10 @@
   border-radius: 0;
 
   &:focus {
-    border-color: var(--cyber-primary);
+    border-color: var(--color-theme);
   }
 
   &:checked {
-    background-color: var(--cyber-primary-darken);
+    background-color: var(--color-theme-darken);
   }
 }

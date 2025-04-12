@@ -9,7 +9,7 @@
   <label for="dec-value" class="form-label">Decimal:</label>
   <input
     id="dec-value"
-    class="form-control form-control-lg text-cyber-primary"
+    class="form-control form-control-lg text-primary"
     bind:value={decValue}
     readonly
   />
@@ -23,7 +23,7 @@
   <label for="hex-value" class="form-label">Hex:</label>
   <input
     id="hex-value"
-    class="form-control form-control-lg text-danger"
+    class="form-control form-control-lg"
     bind:value={hexValue}
     readonly
   />

@@ -5,7 +5,7 @@ export function matrixAnimation(canvasId: string) {
   const FADE_COLOR = "rgba(5, 0, 20, 0.1)";
   const CHARS = "0123456789ABCDEF";
   const canvas = document.querySelector<HTMLCanvasElement>(`#${canvasId}`);
-  let textColor = sessionStorage.getItem("textColor") ?? "rgba(0, 255, 0, 0.7)";
+  let textColor = sessionStorage.getItem("colorTheme") ?? "rgb(27, 212, 215)";
 
   if (!canvas?.getContext) return;
   const ctx = canvas.getContext("2d");
@@ -13,27 +13,6 @@ export function matrixAnimation(canvasId: string) {
 
   let columns = canvas.width / FONT_SIZE;
   let coords: number[] = [];
-
-  document.addEventListener("keydown", (ev) => {
-    const colorMap: Record<string, string> = {
-      "1": "rgba(27, 212, 215, 0.7)",
-      "2": "rgba(254, 1, 85, 0.7)",
-      "3": "rgba(0, 0, 255, 1)",
-      "4": "rgba(255, 210, 40, 0.7)",
-      "5": "rgba(255, 255, 255, 0.7)",
-      "6": "rgba(220, 0, 220, 0.7)",
-      "7": "rgba(255, 100, 0, 0.7)",
-      "8": "rgba(255, 255, 0, 0.7)",
-      "9": "rgba(128, 128, 128, 0.7)",
-      "0": "rgba(0, 255, 0, 0.7)"
-    };
-
-    if (ev.altKey && colorMap[ev.key]) {
-      textColor = colorMap[ev.key];
-    }
-
-    sessionStorage.setItem("textColor", textColor);
-  });
 
   const initWindow = (canvas: HTMLCanvasElement) => {
     canvas.width = canvas.parentElement?.clientWidth ?? canvas.width;
@@ -59,7 +38,7 @@ export function matrixAnimation(canvasId: string) {
     // Clear
     ctx.fillStyle = FADE_COLOR;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = textColor;
+    ctx.fillStyle = sessionStorage.getItem("color-theme") ?? "rgb(27, 212, 215)";
 
     for (let i = 0; i < coords.length; i++) {
       const text = CHARS[Math.floor(Math.random() * CHARS.length)];

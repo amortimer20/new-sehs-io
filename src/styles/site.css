@@ -1,4 +1,5 @@
 @import "bootstrap/dist/css/bootstrap.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css");
 @import "./_base.css";
 @import "./_fonts.css";
 @import "./_buttons.css";

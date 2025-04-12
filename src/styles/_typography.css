@@ -5,9 +5,9 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
-  color: var(--cyber-primary);
+  color: var(--color-theme);
 
   &:hover {
-    color: var(--cyber-primary-lighten);
+    color: var(--color-theme-lighten);
   }
 }

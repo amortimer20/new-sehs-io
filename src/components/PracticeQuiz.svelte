@@ -23,7 +23,6 @@
   let practiceEnded = $state(false);
   let questionsAnswered = $state(0);
   let score = $state(0);
-  let responseStyle = $state(""); // refactor later
   let responseHTML = $state("<p>&nbsp;</p>");
   let allQuestionsComplete = $derived(questionsAnswered === questions.length);
 
@@ -41,14 +40,12 @@
 
     if (currentQuestion.correctAnswers.includes(submittedAnswer)) {
       responseHTML = currentQuestion.answerDetail;
-      responseStyle = "text-cyber-primary";
       isQuestionComplete = true;
       questionsAnswered++;
 
       if (isCorrectOnFirstTry) score++;
     } else {
       responseHTML = "Try again!";
-      responseStyle = "text-cyber-danger";
       isCorrectOnFirstTry = false;
     }
   }
@@ -104,7 +101,7 @@
       <div class="card-body">
         <label class="form-label" for="answer">Answer: </label>
         <input id="answer" class="form-control" bind:value={submittedAnswer} />
-        <p class={responseStyle}>{@html responseHTML}</p>
+        <p>{@html responseHTML}</p>
         <p>Score: {score}/{questions.length}</p>
       </div>
       <div class="card-footer">

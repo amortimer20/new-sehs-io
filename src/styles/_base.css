@@ -3,18 +3,64 @@
   --bs-body-bg: var(--cyber-dark);
   --bs-body-font-family: "jetbrains";
   --bs-heading-font-family: "terminator";
-
-  /* Cyber UI */
-  --cyber-primary: rgb(27, 212, 215);
-  --cyber-primary-rgb: 27, 212, 215;
-  --cyber-primary-lighten: rgb(70, 230, 230);
-  --cyber-primary-darken: rgb(15, 170, 175);
-  --cyber-danger: rgb(254, 1, 85);
-  --cyber-danger-rgb: 254, 1, 85;
   --cyber-dark: rgb(27, 23, 40);
   --cyber-darker: rgb(5, 0, 20);
 
   /* Ed's */
   --eds-green: rgb(10, 100, 80);
   --eds-gold: rgb(255, 210, 40);
+
+  /* Primary theme */
+  --cyber-primary: rgb(27, 212, 215);
+  --cyber-primary-rgb: 27, 212, 215;
+  --cyber-primary-lighten: rgb(70, 230, 230);
+  --cyber-primary-darken: rgb(15, 170, 175);
+
+  /* Red theme */
+  --cyber-red: rgb(254, 1, 85);
+  --cyber-red-rgb: 254, 1, 85;
+  --cyber-red-lighten: rgb(255, 60, 120);
+  --cyber-red-darken: rgb(200, 0, 60);
+
+  /* Green theme */
+  --cyber-green: rgb(0, 255, 0);
+  --cyber-green-rgb: 0, 255, 0;
+  --cyber-green-lighten: rgb(60, 255, 60);
+  --cyber-green-darken: rgb(0, 200, 0);
+
+  /* Blue theme */
+  --cyber-blue: rgb(0, 0, 255);
+  --cyber-blue-rgb: 0, 0, 255;
+  --cyber-blue-lighten: rgb(60, 60, 255);
+  --cyber-blue-darken: rgb(0, 0, 200);
+
+  /* Purple theme */
+  --cyber-purple: rgb(220, 0, 220);
+  --cyber-purple-rgb: 220, 0, 220;
+  --cyber-purple-lighten: rgb(235, 60, 235);
+  --cyber-purple-darken: rgb(170, 0, 170);
+
+  /* Gold theme */
+  --cyber-gold: rgb(255, 210, 40);
+  --cyber-gold-rgb: 255, 210, 40;
+  --cyber-gold-lighten: rgb(255, 230, 90);
+  --cyber-gold-darken: rgb(200, 160, 0);
+
+  /* Orange theme */
+  --cyber-orange: rgb(255, 100, 0);
+  --cyber-orange-rgb: 255, 100, 0;
+  --cyber-orange-lighten: rgb(255, 150, 60);
+  --cyber-orange-darken: rgb(200, 80, 0);
+
+  /* Yellow theme */
+  --cyber-yellow: rgb(255, 255, 0);
+  --cyber-yellow-rgb: 255, 255, 0;
+  --cyber-yellow-lighten: rgb(255, 255, 100);
+  --cyber-yellow-darken: rgb(200, 200, 0);
+
+  /* Current theme */
+  --color-theme: var(--cyber-primary);
+  --color-theme-rgb: var(--cyber-primary-rgb);
+  --color-theme-lighten: var(--cyber-primary-lighten);
+  --color-theme-darken: var(--cyber-primary-darken);
 }
