@@ -12,7 +12,7 @@ export function initializeTheme() {
   ];
 
   for (const cssVar of cssVars) {
-    let sessionVal = sessionStorage.getItem(cssVar);
+    let sessionVal = localStorage.getItem(cssVar);
     let defaultVar = getComputedStyle(darkTheme).getPropertyValue(
       `--${cssVar}`,
     );

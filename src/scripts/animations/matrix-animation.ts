@@ -5,7 +5,7 @@ export function matrixAnimation(canvasId: string) {
   const FADE_COLOR = "rgba(5, 0, 20, 0.1)";
   const CHARS = "0123456789ABCDEF";
   const canvas = document.querySelector<HTMLCanvasElement>(`#${canvasId}`);
-  let textColor = sessionStorage.getItem("colorTheme") ?? "rgb(27, 212, 215)";
+  let textColor = localStorage.getItem("colorTheme") ?? "rgb(27, 212, 215)";
 
   if (!canvas?.getContext) return;
   const ctx = canvas.getContext("2d");
@@ -38,7 +38,7 @@ export function matrixAnimation(canvasId: string) {
     // Fade each frame
     ctx.fillStyle = FADE_COLOR;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = sessionStorage.getItem("color-theme") ?? "rgb(27, 212, 215)";
+    ctx.fillStyle = localStorage.getItem("color-theme") ?? "rgb(27, 212, 215)";
 
     for (let i = 0; i < coords.length; i++) {
       const text = CHARS[Math.floor(Math.random() * CHARS.length)];
@@ -47,7 +47,7 @@ export function matrixAnimation(canvasId: string) {
       // Clear faded column cells
       ctx.fillStyle = "rgb(5, 0, 20)";
       ctx.fillRect(i * FONT_SIZE, coords[i] * FONT_SIZE + -FONT_SIZE * 24, FONT_SIZE, FONT_SIZE);
-      ctx.fillStyle = sessionStorage.getItem("color-theme") ?? "rgb(27, 212, 215)";
+      ctx.fillStyle = localStorage.getItem("color-theme") ?? "rgb(27, 212, 215)";
 
       // Reset Y coordinate if exceeds bottom
       if (coords[i] * FONT_SIZE > canvas.height && Math.random() > 0.95) {

@@ -17,7 +17,7 @@
     for (const [themeProp, mappedVar] of Object.entries(colorMap)) {
       let mappedVarStyle = themeStyles.getPropertyValue(mappedVar);
       darkTheme.style.setProperty(`--${themeProp}`, mappedVarStyle);
-      sessionStorage.setItem(themeProp, mappedVarStyle);
+      localStorage.setItem(themeProp, mappedVarStyle);
     }
   }
 
