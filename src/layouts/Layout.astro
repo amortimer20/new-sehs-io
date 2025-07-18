@@ -1,5 +1,6 @@
 ---
 import ThemeSwitcher from "../components/ThemeSwitcher.svelte";
+import { Font } from "astro:assets";
 
 import "../styles/site.css";
 ---
@@ -12,6 +13,8 @@ import "../styles/site.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>sehs.io</title>
+    <Font cssVariable="--font-orbitron" />
+    <Font cssVariable="--font-jetbrains-mono" />
     <script>
       import { initializeTheme } from "../scripts/theme";
 

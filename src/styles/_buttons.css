@@ -1,5 +1,6 @@
 .btn {
-  font-family: "terminator";
+  font-family: var(--font-orbitron);
+  font-weight: bold;
   text-transform: uppercase;
   border-radius: 0;
 }

@@ -1,11 +1,11 @@
 export function matrixAnimation(canvasId: string) {
+  const FONT_FAMILY = getComputedStyle(document.documentElement).getPropertyValue("--font-jetbrains-mono");
   const FONT_SIZE = 16;
-  const FONT_STYLE = FONT_SIZE + "px jetbrains";
+  const FONT_STYLE = FONT_SIZE + "px " + FONT_FAMILY;
   const BACKGROUND_COLOR = "rgb(5, 0, 20)";
   const FADE_COLOR = "rgba(5, 0, 20, 0.1)";
   const CHARS = "0123456789ABCDEF";
   const canvas = document.querySelector<HTMLCanvasElement>(`#${canvasId}`);
-  let textColor = localStorage.getItem("colorTheme") ?? "rgb(27, 212, 215)";
 
   if (!canvas?.getContext) return;
   const ctx = canvas.getContext("2d");

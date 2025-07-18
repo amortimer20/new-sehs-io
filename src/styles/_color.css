@@ -1,8 +1,8 @@
 :root, [data-bs-theme=dark] {
   /* Base */
   --bs-body-bg: var(--cyber-dark);
-  --bs-body-font-family: "jetbrains";
-  --bs-heading-font-family: "terminator";
+  --bs-body-font-family: var(--font-jetbrains-mono);
+  --bs-heading-font-family: var(--font-orbitron);
   --cyber-dark: rgb(27, 23, 40);
   --cyber-darker: rgb(5, 0, 20);
 
