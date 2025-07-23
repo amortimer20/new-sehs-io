@@ -1,23 +1,15 @@
 ---
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
-
 export interface Props {
   link: string;
-  img: ImageMetadata;
   title: string;
 }
 
-let {
-  link = "#",
-  img,
-  title,
-} = Astro.props
+let { link = "#", title = "" } = Astro.props;
 ---
 
-<div class="card card-shadow">
+<div class="card card-shadow" {title}>
   <a href={link}>
-    <Image src={img} class="card-img-top img-fluid" title={title} alt={title} />
+    <slot />
   </a>
 </div>
 
@@ -25,12 +17,11 @@ let {
   .card {
     --bs-card-border-width: 0;
     --bs-card-inner-border-radius: 0;
-
     box-shadow: none;
     transition: box-shadow 0.25s ease;
   }
 
   .card-shadow:hover {
-    box-shadow: 0 .5rem 1rem var(--color-theme);
+    box-shadow: 0 0.5rem 1rem var(--color-theme);
   }
 </style>

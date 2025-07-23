@@ -1,76 +1,76 @@
 :root, [data-bs-theme=dark] {
   /* Base */
-  --bs-body-bg: var(--cyber-dark);
+  --bs-body-bg: var(--skynest-dark);
   --bs-body-font-family: var(--font-jetbrains-mono);
   --bs-heading-font-family: var(--font-orbitron);
-  --cyber-dark: rgb(27, 23, 40);
-  --cyber-darker: rgb(5, 0, 20);
+  --skynest-dark: rgb(27, 23, 40);
+  --skynest-darker: rgb(5, 0, 20);
 
   /* Ed's */
   --eds-green: rgb(10, 100, 80);
   --eds-gold: rgb(255, 210, 40);
 
   /* Primary theme */
-  --cyber-primary: rgb(27, 212, 215);
-  --cyber-primary-rgb: 27, 212, 215;
-  --cyber-primary-lighten: rgb(70, 230, 230);
-  --cyber-primary-darken: rgb(15, 170, 175);
+  --skynest-primary: rgb(27, 212, 215);
+  --skynest-primary-rgb: 27, 212, 215;
+  --skynest-primary-lighten: rgb(70, 230, 230);
+  --skynest-primary-darken: rgb(15, 170, 175);
 
   /* Red theme */
-  --cyber-red: rgb(254, 1, 85);
-  --cyber-red-rgb: 254, 1, 85;
-  --cyber-red-lighten: rgb(255, 60, 120);
-  --cyber-red-darken: rgb(200, 0, 60);
+  --skynest-red: rgb(254, 1, 85);
+  --skynest-red-rgb: 254, 1, 85;
+  --skynest-red-lighten: rgb(255, 60, 120);
+  --skynest-red-darken: rgb(200, 0, 60);
 
   /* Green theme */
-  --cyber-green: rgb(0, 255, 0);
-  --cyber-green-rgb: 0, 255, 0;
-  --cyber-green-lighten: rgb(60, 255, 60);
-  --cyber-green-darken: rgb(0, 200, 0);
+  --skynest-green: rgb(0, 255, 0);
+  --skynest-green-rgb: 0, 255, 0;
+  --skynest-green-lighten: rgb(60, 255, 60);
+  --skynest-green-darken: rgb(0, 200, 0);
 
   /* Blue theme */
-  --cyber-blue: rgb(0, 0, 255);
-  --cyber-blue-rgb: 0, 0, 255;
-  --cyber-blue-lighten: rgb(60, 60, 255);
-  --cyber-blue-darken: rgb(0, 0, 200);
+  --skynest-blue: rgb(0, 0, 255);
+  --skynest-blue-rgb: 0, 0, 255;
+  --skynest-blue-lighten: rgb(60, 60, 255);
+  --skynest-blue-darken: rgb(0, 0, 200);
 
   /* Purple theme */
-  --cyber-purple: rgb(220, 0, 220);
-  --cyber-purple-rgb: 220, 0, 220;
-  --cyber-purple-lighten: rgb(235, 60, 235);
-  --cyber-purple-darken: rgb(170, 0, 170);
+  --skynest-purple: rgb(220, 0, 220);
+  --skynest-purple-rgb: 220, 0, 220;
+  --skynest-purple-lighten: rgb(235, 60, 235);
+  --skynest-purple-darken: rgb(170, 0, 170);
 
   /* Gold theme */
-  --cyber-gold: rgb(255, 210, 40);
-  --cyber-gold-rgb: 255, 210, 40;
-  --cyber-gold-lighten: rgb(255, 230, 90);
-  --cyber-gold-darken: rgb(200, 160, 0);
+  --skynest-gold: rgb(255, 210, 40);
+  --skynest-gold-rgb: 255, 210, 40;
+  --skynest-gold-lighten: rgb(255, 230, 90);
+  --skynest-gold-darken: rgb(200, 160, 0);
 
   /* Orange theme */
-  --cyber-orange: rgb(255, 100, 0);
-  --cyber-orange-rgb: 255, 100, 0;
-  --cyber-orange-lighten: rgb(255, 150, 60);
-  --cyber-orange-darken: rgb(200, 80, 0);
+  --skynest-orange: rgb(255, 100, 0);
+  --skynest-orange-rgb: 255, 100, 0;
+  --skynest-orange-lighten: rgb(255, 150, 60);
+  --skynest-orange-darken: rgb(200, 80, 0);
 
   /* Yellow theme */
-  --cyber-yellow: rgb(255, 255, 0);
-  --cyber-yellow-rgb: 255, 255, 0;
-  --cyber-yellow-lighten: rgb(255, 255, 100);
-  --cyber-yellow-darken: rgb(200, 200, 0);
+  --skynest-yellow: rgb(255, 255, 0);
+  --skynest-yellow-rgb: 255, 255, 0;
+  --skynest-yellow-lighten: rgb(255, 255, 100);
+  --skynest-yellow-darken: rgb(200, 200, 0);
 
   /* Current theme */
-  --color-theme: var(--cyber-primary);
-  --color-theme-rgb: var(--cyber-primary-rgb);
-  --color-theme-lighten: var(--cyber-primary-lighten);
-  --color-theme-darken: var(--cyber-primary-darken);
+  --color-theme: var(--skynest-primary);
+  --color-theme-rgb: var(--skynest-primary-rgb);
+  --color-theme-lighten: var(--skynest-primary-lighten);
+  --color-theme-darken: var(--skynest-primary-darken);
 }
 
-.bg-cyber {
-  background-color: var(--cyber-dark);
+.bg-skynest {
+  background-color: var(--skynest-dark);
 }
 
-.bg-cyber-dark {
-  background-color: var(--cyber-darker);
+.bg-skynest-dark {
+  background-color: var(--skynest-darker);
 }
 
 .text-primary {
@@ -83,4 +83,8 @@
 
 .text-eds-gold {
   color: var(--eds-gold) !important;
+}
+
+.text-skynest-green {
+  color: var(--skynest-green);
 }

@@ -1,10 +1,10 @@
 /* Standard input */
 .form-control {
   border-radius: 0;
-  background-color: var(--cyber-darker);
+  background-color: var(--skynest-darker);
 
   &:focus {
-    background-color: var(--cyber-darker);
+    background-color: var(--skynest-darker);
     border-color: var(--color-theme);
   }
 }

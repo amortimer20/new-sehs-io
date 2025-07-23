@@ -4,28 +4,32 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import CourseCard from "../components/ui/CourseCard.astro";
 import Divider from "../components/ui/Divider.astro";
-import CyberListItem from "../components/ui/CyberListItem.astro";
+import ListItem from "../components/ui/ListItem.astro";
 
-import codeChallImg from "../assets/courses/code-challenges/img/code-challenges-thumbnail.png";
-import compOrgImg from "../assets/courses/computer-organization/img/computer-organization-thumbnail.png";
-import javaImg from "../assets/courses/java-programming/img/java-thumbnail.png";
-import pythonImg from "../assets/courses/python-programming/img/python-thumbnail.png";
-import skynestLogo from "../assets/img/misc/skynest-emblem-green.svg";
+import CodeChallengesThumbnail from "../assets/courses/code-challenges/img/code-challenges-thumbnail.svg";
+import CompOrgThumbnail from "../assets/courses/computer-organization/img/computer-organization-thumbnail.svg";
+import JavaScriptThumbnail from "../assets/courses/javascript-programming/img/javascript-thumbnail.svg";
+import PythonThumbnail from "../assets/courses/python-programming/img/python-thumbnail.svg";
+import SkynestLogo from "../assets/img/misc/skynest-emblem-green.svg";
 ---
 
 <Layout>
   <!-- Hero Unit -->
-  <div class="bg-cyber-dark mb-3">
+  <div class="bg-skynest-dark mb-3">
     <canvas id="matrix" style="position: absolute;"></canvas>
     <h1 class="text-center text-eds-green pt-5 animation-overlay">
-      St. Edward High School
+      <span class="bg-black p-2 d-inline-block" style="--bs-bg-opacity: .75;"
+        >St. Edward High School</span
+      >
     </h1>
     <h4 class="text-center text-eds-gold animation-overlay">
-      Computer science and Engineering
+      <span class="bg-black p-2 d-inline-block" style="--bs-bg-opacity: .75;"
+        >Computer science and Engineering</span
+      >
     </h4>
     <Image
       id="skynestLogo"
-      src={skynestLogo}
+      src={SkynestLogo}
       class="d-block mx-auto img-fluid w-25 animation-overlay"
       alt="SkyNest Logo"
       title="Click Me"
@@ -36,20 +40,27 @@ import skynestLogo from "../assets/img/misc/skynest-emblem-green.svg";
     <h3 class="text-center py-3">Content</h3>
     <div class="row mb-3">
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
-        <CourseCard link="#" img={pythonImg} title="Python Programming" />
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-3 my-3">
         <CourseCard
           link="/computer-organization/"
-          img={compOrgImg}
-          title="Computer Organization"
-        />
+          title="Computer Orgranization"
+        >
+          <CompOrgThumbnail />
+        </CourseCard>
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
-        <CourseCard link="#" img={javaImg} title="Java Programming" />
+        <CourseCard link="#" title="JavaScript Programming">
+          <JavaScriptThumbnail />
+        </CourseCard>
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
-        <CourseCard link="#" img={codeChallImg} title="Code Challenges" />
+        <CourseCard link="#" title="Python Programming">
+          <PythonThumbnail />
+        </CourseCard>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-3 my-3">
+        <CourseCard link="#" title="Python Programming">
+          <CodeChallengesThumbnail />
+        </CourseCard>
       </div>
     </div>
     <Divider variant="9" />
@@ -58,17 +69,19 @@ import skynestLogo from "../assets/img/misc/skynest-emblem-green.svg";
       <div class="col-sm-12 col-md-6">
         <h4 class="text-center py-3">Links</h4>
         <ul>
-          <CyberListItem>
-            <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
-          </CyberListItem>
+          <ListItem>
+            <a href="https://code.visualstudio.com/" target="_blank"
+              >Visual Studio Code</a
+            >
+          </ListItem>
         </ul>
       </div>
       <div class="col-sm-12 col-md-6">
         <h4 class="text-center py-3">Utilities</h4>
         <ul>
-          <CyberListItem>
+          <ListItem>
             <a href="/utilities/color-picker">RGB Color Picker</a>
-          </CyberListItem>
+          </ListItem>
         </ul>
       </div>
     </div>

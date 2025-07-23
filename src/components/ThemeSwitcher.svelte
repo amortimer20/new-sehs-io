@@ -50,80 +50,80 @@
     <li
       class="dropdown-item"
       onclick={() => {
-        setColorTheme("cyber-primary");
+        setColorTheme("skynest-primary");
       }}
     >
-      <a href="#" style="color: var(--cyber-primary);"
+      <a href="#" style="color: var(--skynest-primary);"
         ><i class="bi bi-diamond-half"></i></a
       >
     </li>
     <li
       class="dropdown-item"
       onclick={() => {
-        setColorTheme("cyber-red");
+        setColorTheme("skynest-red");
       }}
     >
-      <a href="#" style="color: var(--cyber-red);"
+      <a href="#" style="color: var(--skynest-red);"
         ><i class="bi bi-diamond-half"></i></a
       >
     </li>
     <li
       class="dropdown-item"
       onclick={() => {
-        setColorTheme("cyber-green");
+        setColorTheme("skynest-green");
       }}
     >
-      <a href="#" style="color: var(--cyber-green);"
+      <a href="#" style="color: var(--skynest-green);"
         ><i class="bi bi-diamond-half"></i></a
       >
     </li>
     <li
       class="dropdown-item"
       onclick={() => {
-        setColorTheme("cyber-blue");
+        setColorTheme("skynest-blue");
       }}
     >
-      <a href="#" style="color: var(--cyber-blue);"
+      <a href="#" style="color: var(--skynest-blue);"
         ><i class="bi bi-diamond-half"></i></a
       >
     </li>
     <li
       class="dropdown-item"
       onclick={() => {
-        setColorTheme("cyber-purple");
+        setColorTheme("skynest-purple");
       }}
     >
-      <a href="#" style="color: var(--cyber-purple);"
+      <a href="#" style="color: var(--skynest-purple);"
         ><i class="bi bi-diamond-half"></i></a
       >
     </li>
     <li
       class="dropdown-item"
       onclick={() => {
-        setColorTheme("cyber-gold");
+        setColorTheme("skynest-gold");
       }}
     >
-      <a href="#" style="color: var(--cyber-gold);"
+      <a href="#" style="color: var(--skynest-gold);"
         ><i class="bi bi-diamond-half"></i></a
       >
     </li>
     <li
       class="dropdown-item"
       onclick={() => {
-        setColorTheme("cyber-orange");
+        setColorTheme("skynest-orange");
       }}
     >
-      <a href="#" style="color: var(--cyber-orange);"
+      <a href="#" style="color: var(--skynest-orange);"
         ><i class="bi bi-diamond-half"></i></a
       >
     </li>
     <li
       class="dropdown-item"
       onclick={() => {
-        setColorTheme("cyber-yellow");
+        setColorTheme("skynest-yellow");
       }}
     >
-      <a href="#" style="color: var(--cyber-yellow);"
+      <a href="#" style="color: var(--skynest-yellow);"
         ><i class="bi bi-diamond-half"></i></a
       >
     </li>
