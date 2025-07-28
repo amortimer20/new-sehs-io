@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 import Layout from "../layouts/Layout.astro";
 import CourseCard from "../components/ui/CourseCard.astro";
 import Divider from "../components/ui/Divider.astro";
@@ -27,17 +25,14 @@ import SkynestLogo from "../assets/img/misc/skynest-emblem-green.svg";
         >Computer science and Engineering</span
       >
     </h4>
-    <Image
+    <SkynestLogo
       id="skynestLogo"
-      src={SkynestLogo}
       class="d-block mx-auto img-fluid w-25 animation-overlay"
-      alt="SkyNest Logo"
-      title="Click Me"
     />
   </div>
   <section class="container mb-3 p-1">
     <!-- Course Content -->
-    <h3 class="text-center py-3">Content</h3>
+    <h3 id="course-content" class="text-center py-3">Course Content</h3>
     <div class="row mb-3">
       <div class="col-sm-12 col-md-4 col-lg-3 my-3">
         <CourseCard
