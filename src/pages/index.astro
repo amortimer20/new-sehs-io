@@ -94,15 +94,9 @@ import SkynestLogo from "../assets/img/misc/skynest-emblem-green.svg";
     let delta = 0;
     const logo = document.querySelector<HTMLImageElement>("#skynestLogo");
     if (!logo) return;
-
-    logo.onclick = (ev) => {
-      delta += 10;
-      animate(logo, { rotate: `+=${delta}` });
-    };
-
-    logo.onmouseout = (ev) => {
-      animate(logo, { rotate: 0 });
-      delta = 0;
-    };
+    setInterval(() => { 
+      animate(logo, { rotateY: delta}); 
+      delta += 3;
+    }, 100);
   })();
 </script>
